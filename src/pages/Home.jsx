@@ -1,13 +1,13 @@
 
 import React from "react";
-import '../styles/style.scss';
+import { WebHeader } from "../components/Common/WebHeader";
 
 export const Home = () => {
     return (
         <>
-            
-                <h2 className="pd-main-title">Home</h2>
-           
+
+            <WebHeader />
+
         </>
     )
 }

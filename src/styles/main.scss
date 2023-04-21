@@ -1,3 +1,29 @@
-*{
+* {
     scroll-behavior: smooth;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.pd-primary-btn {
+    @include def-button($primary, $white, 4px 10px 3px 10px, 100px, 2px solid, 15px, $primary, uppercase);
+    @include fnt-dmsans(700, 0.875rem);
+
+    &:hover {
+        @include def-button($primary, $white, 4px 10px 3px 10px, 100px, 2px solid, 15px, $primary, uppercase);
+    }
+}
+
+.pd-primary-btn-outlined {
+    @include def-button($white, $primary, 4px 10px 2px 10px, 100px, 2px solid, 15px, $primary, uppercase);
+    @include fnt-dmsans(700, 0.875rem);
+
+    &:hover {
+        @include def-button($primary, $white, 4px 10px 2px 10px, 100px, 2px solid, 15px, $primary, uppercase);
+    }
 }

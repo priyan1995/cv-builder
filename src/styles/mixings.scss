@@ -16,29 +16,21 @@ $fnt-poppins-regular: 'Poppins', sans-serif;
     font-size: $size;
 }
 
-@mixin border-radius($radius){
+@mixin border-radius($radius) {
     border-radius: $radius;
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
 }
 
-@mixin def-button($background,$color,$fontSize,$minHeight,$paddingLeft,$paddingRight,$paddingTop,$paddingBottom) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left:$paddingLeft;
-    padding-right:$paddingRight;
-    padding-top:$paddingTop;
-    padding-bottom:$paddingBottom;
-    gap: 10px;
+@mixin def-button($background, $color, $padding, $min-width, $border, $border-radius, $border-color,$text-transform) {
+    min-width: $min-width;
     background: $background;
-    border-radius: 10px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    border: none;
+    border-radius: $border-radius;
+    padding: $padding;
+    border: $border;
+    text-align: center;
+    border-color: $border-color;
     color: $color;
-    font-size: $fontSize;
-    min-height: $minHeight;
-    transition: 0.5s;
+    transition: all 0.5s;
+    text-transform: $text-transform;
 }

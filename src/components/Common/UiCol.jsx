@@ -1,7 +1,7 @@
 import React from "react";
 import Col from 'react-bootstrap/Col';
 
-export const UiRow = (props) => {
+export const UiCol = (props) => {
     return (
         <>
             <Col className={props.className} xxl={props.xxl} xl={props.xl}
