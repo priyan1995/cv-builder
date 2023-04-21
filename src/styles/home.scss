@@ -17,6 +17,8 @@
 
         &:hover {
             @include def-button($primary, $white, 10px, 60%, 2px solid, 46px, $primary, uppercase);
+            transform: translateY(-2px);
+            box-shadow: 0px 26px 36px -17px rgba(250, 112, 98, 0.4392156863);
         }
     }
 
@@ -48,12 +50,13 @@
         position: relative;
         transition: all 0.5s;
 
-        &:hover{
+        &:hover {
             transform: translateY(-5px);
             box-shadow: 0px 26px 36px -17px #fa706270;
+
             .pd-img-feat {
                 transform: translateY(12px);
-                
+
             }
         }
 
@@ -66,7 +69,7 @@
         p {
             @include fnt-dmsans(400, 0.875rem);
             margin-bottom: 0;
-            color:$paraColor;
+            color: $paraColor;
         }
 
         .pd-img-feat {
@@ -85,12 +88,86 @@
             position: absolute;
             left: 50%;
             margin-left: -25px;
-            top: -17%;      
-            transition: all 0.5s;     
+            top: -17%;
+            transition: all 0.5s;
 
             img {
                 width: 100%;
-                filter: invert(73%) sepia(31%) saturate(6952%) hue-rotate(327deg) brightness(106%) contrast(102%);;
+                filter: invert(73%) sepia(31%) saturate(6952%) hue-rotate(327deg) brightness(106%) contrast(102%);
+                ;
+            }
+        }
+    }
+}
+
+.pd-hcgr {
+    background: $sectionBg;
+
+    .pd-sub-title {
+        color: $white;
+        @include fnt-dmsans(400, 1.5rem);
+        margin-bottom: 5rem;
+    }
+
+    .pd-main-title {
+        color: $white;
+        @include fnt-dmsans(700, 2.5rem);
+    }
+
+    &__pd-steps-res {
+        .pd-res-step-card {
+            padding-right: 20%;
+            padding-left: 20px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 1px;
+                height: 100%;
+                background-color: $white;
+                top: 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-left: 13px solid $sectionBg;
+                border-bottom: 15px solid transparent;
+                left: -42px;
+                top: 0px;
+                z-index: 9;
+            }
+
+            div {
+                left: -42px;
+                background: $white;
+                color: $sectionBg;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 42px;
+                height: 30px;
+                padding-left: 8px;
+                @include fnt-poppins(700, 1.1rem);
+                position: absolute;
+            }
+
+            h4 {
+                color: $white;
+                @include fnt-poppins(600, 1.15rem);
+                margin-bottom: 1.5rem;
+                min-height: 46px;
+            }
+
+            p {
+                color: $white;
+                margin-bottom: 0;
+                @include fnt-dmsans(400, 1rem);
             }
         }
     }

@@ -40,6 +40,10 @@ p,h1,h2,h3,h4,h5,h6,div{
     @include fnt-dmsans(700, 1rem);
 }
 
+.pd-sub-title{
+    @include fnt-dmsans(500, 0.9rem);
+}
+
 .pd-padd{
     padding:  4% 0;
 }

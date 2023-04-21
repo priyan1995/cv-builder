@@ -9,3 +9,13 @@ export const UiTitle = (props) => {
         </>
     )
 }
+
+export const UiSubtitle = (props) => {
+    return (
+        <>
+            <h2 className="pd-sub-title">
+                {props.children}
+            </h2>
+        </>
+    )
+} 
