@@ -2,3 +2,19 @@
     @include fnt-dmsans(500, 2rem);
     color:$mainFont;
 }
+
+.pd-home-banner{
+    min-height:70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    .pd-primary-btn{
+        @include def-button($primary, $white, 10px , 50%, 2px solid, 46px, $primary, uppercase);
+        @include fnt-dmsans(800, 0.875rem);
+        &:hover {
+            @include def-button($primary, $white, 10px, 50%, 2px solid, 46px, $primary, uppercase);
+        }
+    }
+}
