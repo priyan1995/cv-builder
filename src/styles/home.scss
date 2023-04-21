@@ -203,25 +203,31 @@
 }
 
 .pd-testimonials-sec {
-    .pd-main-title{
-        @include fnt-dmsans(700, 2.5rem); 
+    .pd-main-title {
+        @include fnt-dmsans(700, 2.5rem);
     }
-    .pd-sub-title{
-        @include fnt-dmsans(400, 1.5rem); 
+
+    .pd-sub-title {
+        @include fnt-dmsans(400, 1.5rem);
     }
+
     &__testi-slider {
         margin-top: 2rem;
+
         .pd-slider-item {
             position: relative;
             padding: 30px;
-            p{
-                 @include fnt-dmsans(400, 1rem);
-                 line-height: 1.8rem;
+
+            p {
+                @include fnt-dmsans(400, 1rem);
+                line-height: 1.8rem;
             }
-            h5{
-                 @include fnt-dmsans(600, 1.1rem);
+
+            h5 {
+                @include fnt-dmsans(600, 1.1rem);
             }
-            .comma{
+
+            .comma {
                 width: 40px;
                 height: 40px;
                 object-fit: contain;
@@ -233,44 +239,77 @@
             }
         }
     }
-    &__clients{
+
+    &__clients {
         margin-top: 6rem;
-        .pd-sub-title{
+
+        .pd-sub-title {
             margin-bottom: 3rem;
         }
     }
 
 }
 
-.pd-wiprc{
+.pd-wiprc {
     background: $sectionBg;
     color: $white;
-    .pd-main-title{
+
+    .pd-main-title {
         color: $white;
-        @include fnt-dmsans(700, 2.5rem); 
+        @include fnt-dmsans(700, 2.5rem);
         margin-bottom: 3rem;
     }
 
-    &__card{
+    &__card {
         text-align: center;
         margin-top: 2rem;
-        p{
-            color:$white;
-            @include fnt-dmsans(400, 1rem); 
+
+        p {
+            color: $white;
+            @include fnt-dmsans(400, 1rem);
             margin-top: 1rem;
         }
-        h4{
-            color:$white;
-            @include fnt-poppins(700, 2rem); 
+
+        h4 {
+            color: $white;
+            @include fnt-poppins(700, 2rem);
         }
 
-        div{
-            color:$white;
+        div {
+            color: $white;
         }
-        img{
+
+        img {
             width: 50px;
             filter: invert(1);
             margin-bottom: 2rem;
         }
+    }
+}
+
+.pd-worm {
+    .pd-main-title {
+        @include fnt-dmsans(700, 2.5rem);
+        width: 80%;
+        margin:auto;
+    }
+
+    .pd-sub-title {
+        @include fnt-dmsans(400, 1.5rem);
+        margin: auto;
+        margin-top: 1rem;
+        width: 80%;
+    }
+
+    .pd-primary-btn {
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    iframe {
+        margin-top: 3rem;
+        width: 100%;
+        height:500px;
+        width: 80%;
     }
 }
