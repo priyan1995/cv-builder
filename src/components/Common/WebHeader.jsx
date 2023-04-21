@@ -10,7 +10,7 @@ export const WebHeader = (props) => {
         <>
             <section className="pd-web-header">
                 <UiContainer>
-                    <UiRow>
+                    <UiRow className="align-items-center">
                         <UiCol lg="6" className="text-left">
                             <img src={MainLogo} />
                         </UiCol>

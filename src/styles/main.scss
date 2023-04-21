@@ -10,6 +10,10 @@
     text-align: left;
 }
 
+.align-items-center{
+    align-items: center
+}
+
 .pd-primary-btn {
     @include def-button($primary, $white, 4px 10px 3px 10px, 100px, 2px solid, 15px, $primary, uppercase);
     @include fnt-dmsans(700, 0.875rem);

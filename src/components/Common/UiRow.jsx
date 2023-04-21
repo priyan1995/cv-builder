@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 export const UiRow = (props) => {
     return (
         <>
-            <Row>
+            <Row className={props.className}>
                 {props.children}
             </Row>
         </>
