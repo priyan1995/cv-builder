@@ -4,6 +4,7 @@ import { WebHeader } from "../components/Common/WebHeader";
 import { HomeBanner } from "../components/Home/HomeBanner";
 import { HomeFeatures } from "../components/Home/HomeFeatures";
 import { HowToCreateGreatResume } from "../components/Home/HomeHowToCreateResume";
+import { Testimonials } from "../components/Home/HomeTestimonials";
 
 export const Home = () => {
     return (
@@ -12,6 +13,7 @@ export const Home = () => {
             <HomeBanner />
             <HomeFeatures />
             <HowToCreateGreatResume />
+            <Testimonials />
 
         </>
     )
