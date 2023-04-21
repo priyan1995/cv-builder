@@ -82,6 +82,11 @@ p,h1,h2,h3,h4,h5,h6,div{
             @include fnt-dmsans(400, 0.875rem);
             text-decoration: none;
             line-height: 2rem;
+            transition: all 0.5s;
+                &:hover{
+                    transition: 0.5s;
+                    color: $primary;
+                }
         }
     }
 
@@ -97,6 +102,11 @@ p,h1,h2,h3,h4,h5,h6,div{
             a{
                 color: $white;
                 text-decoration: none;
+                transition: all 0.5s;
+                &:hover{
+                    transition: 0.5s;
+                    color: $primary;
+                }
               
             }
         }
