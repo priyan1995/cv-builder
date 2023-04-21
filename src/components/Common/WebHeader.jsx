@@ -4,6 +4,7 @@ import { UiRow } from "./UiRow";
 import { UiCol } from "./UiCol";
 import MainLogo from '../../styles/img/logo.png';
 import { UiButton } from "./UiButtons";
+import { Link } from "react-router-dom";
 
 export const WebHeader = (props) => {
     return (
@@ -16,7 +17,9 @@ export const WebHeader = (props) => {
                         </UiCol>
 
                         <UiCol lg="6" className="text-right">
-                            <UiButton className="pd-primary-btn-outlined">Login</UiButton>
+                            <Link to="/login">
+                                <UiButton className="pd-primary-btn-outlined">Login</UiButton>
+                            </Link>
                             <UiButton className="pd-primary-btn">Sign Up</UiButton>
                         </UiCol>
                     </UiRow>

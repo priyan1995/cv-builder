@@ -6,6 +6,7 @@ import Background from '../../styles/img/bg-banner-home.jpg'
 import bannerDummyCv from '../../styles/img/dummy-cv.png'
 import { UiButton } from "../Common/UiButtons";
 import { UiTitle } from "../Common/UiTitle";
+import { Link } from "react-router-dom";
 
 export const HomeBanner = (props) => {
     return (
@@ -14,9 +15,11 @@ export const HomeBanner = (props) => {
                 <UiContainer>
                     <UiRow className="align-items-center">
                         <UiCol lg="6">
-                            <UiTitle>Build the resume that <br/> lands you jobs</UiTitle>
+                            <UiTitle>Build the resume that <br /> lands you jobs</UiTitle>
                             <p>Do it in minutes with our resume builder and cover letter creator. Get 70% more interviews. More than 5 million users have already found the job they deserve with us.</p>
-                            <UiButton className="pd-primary-btn">Get Started!</UiButton>
+                            <Link to="/login">
+                                <UiButton className="pd-primary-btn">Get Started!</UiButton>
+                            </Link>
                         </UiCol>
                         <UiCol lg="6" className="pd-banner-img">
                             <img src={bannerDummyCv} />
