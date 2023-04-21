@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+
+
+$fnt-dmsans-regular: 'DM Sans', sans-serif;
+$fnt-poppins-regular: 'Poppins', sans-serif;
+
+@mixin fnt-dmsans($weight, $size) {
+    font-family: $fnt-dmsans-regular;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin fnt-poppins($weight, $size) {
+    font-family: $fnt-poppins-regular;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin border-radius($radius){
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin def-button($background,$color,$fontSize,$minHeight,$paddingLeft,$paddingRight,$paddingTop,$paddingBottom) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:$paddingLeft;
+    padding-right:$paddingRight;
+    padding-top:$paddingTop;
+    padding-bottom:$paddingBottom;
+    gap: 10px;
+    background: $background;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: none;
+    color: $color;
+    font-size: $fontSize;
+    min-height: $minHeight;
+    transition: 0.5s;
+}
