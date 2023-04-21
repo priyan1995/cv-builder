@@ -47,3 +47,16 @@ p,h1,h2,h3,h4,h5,h6,div{
 .pd-padd{
     padding: $sectionSpace;
 }
+
+.slick-dots li button{
+    transform: scale(1.2);
+}
+
+.slick-dots li button:before{
+    color: $primary;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: $primary;
+}
