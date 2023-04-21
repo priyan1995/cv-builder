@@ -31,3 +31,7 @@
         @include def-button($primary, $white, 4px 10px 2px 10px, 100px, 2px solid, 15px, $primary, uppercase);
     }
 }
+
+.pd-main-title{
+    @include fnt-dmsans(700, 1rem);
+}

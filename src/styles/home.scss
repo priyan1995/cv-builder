@@ -11,10 +11,20 @@
     display: flex;
     align-items: center;
     .pd-primary-btn{
-        @include def-button($primary, $white, 10px , 50%, 2px solid, 46px, $primary, uppercase);
+        @include def-button($primary, $white, 10px , 60%, 2px solid, 46px, $primary, uppercase);
         @include fnt-dmsans(800, 0.875rem);
         &:hover {
-            @include def-button($primary, $white, 10px, 50%, 2px solid, 46px, $primary, uppercase);
+            @include def-button($primary, $white, 10px, 60%, 2px solid, 46px, $primary, uppercase);
         }
+    }
+    .pd-main-title{
+        @include fnt-dmsans(500, 3rem);
+        margin-bottom: 1.5rem;
+        color: $mainFont;
+    }
+    p{
+        @include fnt-dmsans(400, 1.15rem);   
+        margin-bottom: 2.5rem;
+        color: $mainFont;
     }
 }
