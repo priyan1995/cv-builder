@@ -116,7 +116,7 @@
 
     &__pd-steps-res {
         .pd-res-step-card {
-            padding-right: 20%;
+            max-width: 80%;
             padding-left: 20px;
             position: relative;
 
@@ -169,6 +169,30 @@
                 margin-bottom: 0;
                 @include fnt-dmsans(400, 1rem);
             }
+        }
+    }
+    &__resume-coach{
+        margin-top: 6rem;
+        .pd-main-title{
+            @include fnt-dmsans(600, 1.8rem);
+            margin-bottom: 2rem;
+        }
+        .pd-sub-title{
+            @include fnt-dmsans(400, 1.2rem);
+            line-height: 1.8rem;
+            margin-bottom: 3rem;
+        }
+        iframe{
+            width: 100%;
+            height: 350px;
+        }
+        .pd-primary-btn{
+            color: $white;
+            background: transparent;
+            border-color:$white;
+            min-width: 200px;
+            padding: 10px;
+            @include border-radius(50px)
         }
     }
 }

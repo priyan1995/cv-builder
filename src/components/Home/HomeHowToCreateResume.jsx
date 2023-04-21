@@ -3,6 +3,8 @@ import { UiContainer } from "../Common/UiContainr";
 import { UiRow } from "../Common/UiRow";
 import { UiCol } from "../Common/UiCol";
 import { UiSubtitle, UiTitle } from "../Common/UiTitle";
+import { UiButton } from "../Common/UiButtons";
+import { Link } from "react-router-dom";
 
 export const HowToCreateGreatResume = (props) => {
     return (
@@ -40,6 +42,23 @@ export const HowToCreateGreatResume = (props) => {
                                 <h4>Follow expert tips and examples to make your resume shine!</h4>
                                 <p>Send your resume and start preparing for your job interviews!</p>
                             </div>
+                        </UiCol>
+                    </UiRow>
+
+                    <UiRow className="pd-hcgr__resume-coach align-items-center">
+                        <UiCol lg="6">
+                            <UiTitle>
+                                See what ResumeCoach can do for you!
+                            </UiTitle>
+                            <UiSubtitle>
+                                Discover how our resume maker can help you nail your resume, get more interviews, and land your dream job!
+                            </UiSubtitle>
+                            <Link to="/">
+                                <UiButton className="pd-primary-btn">Try It Now!</UiButton>
+                            </Link>
+                        </UiCol>
+                        <UiCol lg="6">
+                            <iframe  src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </UiCol>
                     </UiRow>
                 </UiContainer>
