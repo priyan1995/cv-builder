@@ -189,6 +189,7 @@
         iframe {
             width: 100%;
             height: 350px;
+            @include border-radius(15px);
         }
 
         .pd-primary-btn {
