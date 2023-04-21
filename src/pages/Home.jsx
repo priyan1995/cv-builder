@@ -7,6 +7,7 @@ import { HowToCreateGreatResume } from "../components/Home/HomeHowToCreateResume
 import { Testimonials } from "../components/Home/HomeTestimonials";
 import { HomeJoinResumeCoach } from "../components/Home/HomeJoinResumeCoach";
 import { HomeWhyOnlineResumeMaker } from "../components/Home/HomeWhyOnlineResumeMaker";
+import { WebFooter } from "../components/Common/WebFooter";
 
 export const Home = () => {
     return (
@@ -18,6 +19,7 @@ export const Home = () => {
             <Testimonials />
             <HomeJoinResumeCoach />
             <HomeWhyOnlineResumeMaker />
+            <WebFooter />
 
         </>
     )

@@ -60,3 +60,45 @@ p,h1,h2,h3,h4,h5,h6,div{
     opacity: .75;
     color: $primary;
 }
+
+.pd-main-web-footer{
+    background:$sectionBg;
+    padding-bottom: 0;
+
+    .pd-main-logo{
+        margin-bottom: 3rem;
+    }
+
+    &__pd-footer-menu{
+        margin-bottom: 2rem;
+        h4{
+            color: $white;
+            @include fnt-dmsans(600, 1.2rem);
+            margin-bottom: 1.5rem;
+        }
+        a{
+            color: $white;
+            margin: 0 1rem;
+            @include fnt-dmsans(400, 0.875rem);
+            text-decoration: none;
+            line-height: 2rem;
+        }
+    }
+
+    &__pd-f-credit{
+        text-align: center;
+        padding-bottom: 1rem;
+        background: $black;
+        padding-top: 1rem;
+        p{
+            margin-bottom: 0;
+            color: $white;
+            @include fnt-dmsans(300, 0.8rem);
+            a{
+                color: $white;
+                text-decoration: none;
+              
+            }
+        }
+    }
+}
