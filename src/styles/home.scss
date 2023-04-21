@@ -38,9 +38,24 @@
     .pd-feature-card {
         text-align: center;
         background: $white;
-        padding: 35px 20px 25px;
+        padding: 25px 20px 25px;
         border: 1px solid $primary;
         @include border-radius(8px);
+        min-height: 155px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: all 0.5s;
+
+        &:hover{
+            transform: translateY(-5px);
+            box-shadow: 0px 26px 36px -17px #fa706270;
+            .pd-img-feat {
+                transform: translateY(12px);
+                
+            }
+        }
 
         .pd-main-title {
             color: $primary;
@@ -51,6 +66,7 @@
         p {
             @include fnt-dmsans(400, 0.875rem);
             margin-bottom: 0;
+            color:$paraColor;
         }
 
         .pd-img-feat {
@@ -66,7 +82,11 @@
             margin: auto;
             background: $white;
             padding: 12px;
-            margin-top: -58px;
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            top: -17%;      
+            transition: all 0.5s;     
 
             img {
                 width: 100%;

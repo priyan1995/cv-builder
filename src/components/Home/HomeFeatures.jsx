@@ -16,41 +16,50 @@ export const HomeFeatures = (props) => {
                     <UiRow>
                         <UiCol lg="3">
                             <div className="pd-feature-card">
-                                <div className="pd-img-feat">
-                                    <img src={TrophyImage} />
+                                <div>
+                                    <div className="pd-img-feat">
+                                        <img src={TrophyImage} />
+                                    </div>
+                                    <UiTitle>Job-winning Templates</UiTitle>
+                                    <p>Be in the top 3% that gets past the first round.</p>
                                 </div>
-                                <UiTitle>Job-winning Templates</UiTitle>
-                                <p>Be in the top 3% that <br />gets past the first round.</p>
                             </div>
                         </UiCol>
 
                         <UiCol lg="3">
                             <div className="pd-feature-card">
-                                <div className="pd-img-feat">
-                                    <img src={letter} />
+                                <div>
+                                    <div className="pd-img-feat">
+                                        <img src={letter} />
+                                    </div>
+                                    <UiTitle>Professional Cover Letter Creator</UiTitle>
+                                    <p>Enjoy effective cover letter guidance  and inspiring examples.</p>
                                 </div>
-                                <UiTitle>Professional Cover Letter Creator</UiTitle>
-                                <p>Enjoy effective cover letter guidance <br/> and inspiring examples.</p>
+                            </div>
+                        </UiCol>
+
+
+                        <UiCol lg="3">
+                            <div className="pd-feature-card">
+                                <div>
+                                    <div className="pd-img-feat">
+                                        <img src={jobseasrch} />
+                                    </div>
+                                    <UiTitle>Job-winning Templates</UiTitle>
+                                    <p>Find jobs quickly that match your experience.</p>
+                                </div>
                             </div>
                         </UiCol>
 
                         <UiCol lg="3">
                             <div className="pd-feature-card">
-                                <div className="pd-img-feat">
-                                    <img src={jobseasrch} />
+                                <div>
+                                    <div className="pd-img-feat">
+                                        <img src={step} />
+                                    </div>
+                                    <UiTitle>Job-winning Templates</UiTitle>
+                                    <p>Expert advice and real-life examples from successful jobseekers.</p>
                                 </div>
-                                <UiTitle>Job-winning Templates</UiTitle>
-                                <p>Find jobs quickly that match your <br /> experience.</p>
-                            </div>
-                        </UiCol>
-
-                        <UiCol lg="3">
-                            <div className="pd-feature-card">
-                                <div className="pd-img-feat">
-                                    <img src={step} />
-                                </div>
-                                <UiTitle>Job-winning Templates</UiTitle>
-                                <p>Expert advice and real-life examples <br /> from successful jobseekers.</p>
                             </div>
                         </UiCol>
                     </UiRow>
