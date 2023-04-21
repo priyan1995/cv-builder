@@ -18,9 +18,10 @@
         }
     }
     .pd-main-title{
-        @include fnt-dmsans(500, 3rem);
+        @include fnt-poppins(400, 3rem);
         margin-bottom: 1.5rem;
         color: $mainFont;
+        line-height: 3.9rem;
     }
     p{
         @include fnt-dmsans(400, 1.15rem);   
