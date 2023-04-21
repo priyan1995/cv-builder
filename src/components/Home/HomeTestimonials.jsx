@@ -5,6 +5,8 @@ import { UiCol } from "../Common/UiCol";
 import { UiSubtitle, UiTitle } from "../Common/UiTitle";
 import { UiSlider } from "../Common/UiSlider";
 import commaIcon from '../../styles/img/comma.png';
+import clients from '../../styles/img/clients.png';
+
 
 export const Testimonials = (props) => {
     const Slidersettings = {
@@ -28,34 +30,40 @@ export const Testimonials = (props) => {
                         <UiSlider settings={Slidersettings}>
                             <div className="pd-slider-item">
                                 <p>Very easy and helpful. Making my resume on this website was a breeze and it helped me point out important details about my experience, skills, and objective. The agents via chat are amazing. </p>
-                                <img src={commaIcon}  className="comma"/>
+                                <img src={commaIcon} className="comma" />
                                 <h5>Lorem Ipsum</h5>
                             </div>
 
                             <div className="pd-slider-item">
                                 <p>Very easy and helpful. Making my resume on this website was a breeze and it helped me point out important details about my experience, skills, and objective. The agents via chat are amazing. </p>
-                                <img src={commaIcon}  className="comma"/>
+                                <img src={commaIcon} className="comma" />
                                 <h5>Lorem Ipsum</h5>
                             </div>
 
                             <div className="pd-slider-item">
                                 <p>Very easy and helpful. Making my resume on this website was a breeze and it helped me point out important details about my experience, skills, and objective. The agents via chat are amazing. </p>
-                                <img src={commaIcon}  className="comma"/>
+                                <img src={commaIcon} className="comma" />
                                 <h5>Lorem Ipsum</h5>
                             </div>
 
                             <div className="pd-slider-item">
                                 <p>Very easy and helpful. Making my resume on this website was a breeze and it helped me point out important details about my experience, skills, and objective. The agents via chat are amazing. </p>
-                                <img src={commaIcon}  className="comma"/>
+                                <img src={commaIcon} className="comma" />
                                 <h5>Lorem Ipsum</h5>
                             </div>
 
                             <div className="pd-slider-item">
                                 <p>Very easy and helpful. Making my resume on this website was a breeze and it helped me point out important details about my experience, skills, and objective. The agents via chat are amazing. </p>
-                                <img src={commaIcon}  className="comma"/>
+                                <img src={commaIcon} className="comma" />
                                 <h5>Lorem Ipsum</h5>
                             </div>
                         </UiSlider>
+                    </UiRow>
+                    <UiRow className="pd-testimonials-sec__clients">
+                        <UiCol lg="12" className="text-center">
+                            <UiSubtitle>Our proven resumes get people jobs at top companies</UiSubtitle>
+                            <img src={clients} className="w-100"/>
+                        </UiCol>
                     </UiRow>
                 </UiContainer>
             </section>
