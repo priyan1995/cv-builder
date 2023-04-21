@@ -307,6 +307,11 @@
         min-width: 320px;
         border-radius: 105px;
         margin-top: 3rem;
+        &:hover{
+            @include def-button($primary, $white, 10px, 60%, 2px solid, 46px, $primary, uppercase);
+            transform: translateY(-2px);
+            box-shadow: 0px 26px 36px -17px rgba(250, 112, 98, 0.4392156863);
+        }
     }
 
     iframe {
