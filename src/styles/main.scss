@@ -2,6 +2,10 @@
     scroll-behavior: smooth;
 }
 
+p,h1,h2,h3,h4,h5,h6,div{
+    color: $mainFont;
+}
+
 .text-right{
     text-align: right;
 }
@@ -34,4 +38,8 @@
 
 .pd-main-title{
     @include fnt-dmsans(700, 1rem);
+}
+
+.pd-padd{
+    padding:  4% 0;
 }

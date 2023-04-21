@@ -1,31 +1,77 @@
-.pd-main-title{
+.pd-main-title {
     @include fnt-dmsans(500, 2rem);
-    color:$mainFont;
+    color: $mainFont;
 }
 
-.pd-home-banner{
-    min-height:70vh;
+.pd-home-banner {
+    min-height: 70vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    .pd-primary-btn{
-        @include def-button($primary, $white, 10px , 60%, 2px solid, 46px, $primary, uppercase);
+
+    .pd-primary-btn {
+        @include def-button($primary, $white, 10px, 60%, 2px solid, 46px, $primary, uppercase);
         @include fnt-dmsans(800, 0.875rem);
+
         &:hover {
             @include def-button($primary, $white, 10px, 60%, 2px solid, 46px, $primary, uppercase);
         }
     }
-    .pd-main-title{
+
+    .pd-main-title {
         @include fnt-poppins(400, 3rem);
         margin-bottom: 1.5rem;
         color: $mainFont;
         line-height: 3.9rem;
     }
-    p{
-        @include fnt-dmsans(400, 1.15rem);   
+
+    p {
+        @include fnt-dmsans(400, 1.15rem);
         margin-bottom: 2.5rem;
         color: $mainFont;
+    }
+}
+
+.pd-home-features-content {
+    .pd-feature-card {
+        text-align: center;
+        background: $white;
+        padding: 35px 20px 25px;
+        border: 1px solid $primary;
+        @include border-radius(8px);
+
+        .pd-main-title {
+            color: $primary;
+            @include fnt-dmsans(500, 1rem);
+            margin: 10px 0 10px;
+        }
+
+        p {
+            @include fnt-dmsans(400, 0.875rem);
+            margin-bottom: 0;
+        }
+
+        .pd-img-feat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+            @include border-radius(100%);
+            border: 1px solid $primary;
+            margin-bottom: 5px;
+            margin: auto;
+            background: $white;
+            padding: 12px;
+            margin-top: -58px;
+
+            img {
+                width: 100%;
+                filter: invert(73%) sepia(31%) saturate(6952%) hue-rotate(327deg) brightness(106%) contrast(102%);;
+            }
+        }
     }
 }
