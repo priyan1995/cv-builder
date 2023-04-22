@@ -8,6 +8,7 @@ input,
 label,
 .MuiFormGroup-root span {
     font-family: 'DM Sans', sans-serif !important;
+    color: $paraColor;
 }
 
 .pd-login-form {
@@ -49,22 +50,46 @@ label,
     &__icon-card {
         align-items: center;
         display: flex;
+        border: 1px solid $borderGray;
+        flex: 0 0 45%;
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        @include border-radius(2rem);
+        text-decoration: none !important;
+        transition: all 0.5s;
+
+        &:hover{
+            transition: 0.5s;
+        }
+
+
+
+        div{
+            display: flex;
+            align-items: center;
+        }
+
+        &:last-child {
+            img{
+                margin-top: -4px;
+            }
+        }
+
 
         img {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             object-fit: contain;
+            margin-right: 8px;
         }
 
         span {
             margin-bottom: 0;
-            @include fnt-dmsans(400, 0.8rem);
+            @include fnt-dmsans(400, 0.9rem);
             color: $paraColor;
             text-transform: uppercase;
-
-            &:last-child {
-                margin-bottom: -5px;
-            }
+            margin-bottom: -5px;
         }
 
     }
@@ -99,7 +124,7 @@ label,
                 height: 1px;
                 background: #969b9e52;
                 top: 50%;
-                left:0;
+                left: 0;
             }
 
         }

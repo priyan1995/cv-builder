@@ -1,5 +1,6 @@
 import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Input, TextField } from "@mui/material";
 import React from "react";
+import { pink } from '@mui/material/colors';
 
 
 
@@ -21,7 +22,14 @@ export const UiCheckBox = (props) => {
     return (
         <>
             <FormGroup>
-                <FormControlLabel control={<Checkbox />} label={props.label} />
+                <FormControlLabel control={<Checkbox
+                    sx={{
+                        color: pink[800],
+                        '&.Mui-checked': {
+                            color: pink[600],
+                        },
+                    }}
+                />} label={props.label} />
             </FormGroup>
         </>
     )
