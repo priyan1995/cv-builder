@@ -25,7 +25,7 @@ export const WebFooter = (props) => {
                         </UiCol> */}
 
                         <UiCol lg="12" className="text-center">
-                            <img src={MainLogo}  className="pd-main-logo"/>
+                            <Link to="/"><img src={MainLogo} className="pd-main-logo" /></Link>
                             <h4>Quick Links</h4>
                             <Link to="/">Privacy Policy</Link>
                             <Link to="/">FAQ</Link>

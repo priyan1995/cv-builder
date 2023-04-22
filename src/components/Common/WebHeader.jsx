@@ -13,7 +13,7 @@ export const WebHeader = (props) => {
                 <UiContainer>
                     <UiRow className="align-items-center">
                         <UiCol lg="6" className="text-left">
-                            <img src={MainLogo} />
+                           <Link to="/"> <img src={MainLogo} /></Link>
                         </UiCol>
 
                         <UiCol lg="6" className="text-right">
