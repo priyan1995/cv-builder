@@ -42,6 +42,11 @@ label,
         @include fnt-dmsans(400, 1rem);
         margin-top: 1rem;
     }
+    .pd-forg-pw{
+        @include fnt-dmsans(500, 0.9rem);
+        text-decoration: none;
+        color: $primary;
+    }
 }
 
 .pd-log-with {
@@ -61,6 +66,7 @@ label,
 
         &:hover{
             transition: 0.5s;
+            background: #f7f7f7;
         }
 
 

@@ -38,7 +38,7 @@ export const Login = (props) => {
                                 />
                                 <div className="pd-flx-space-between">
                                     <UiCheckBox label="Remember Me" />
-                                    <Link to="/">Forgot Password</Link>
+                                    <Link to="/" className="pd-forg-pw">Forgot Password</Link>
                                 </div>
 
                                 <UiButton className="pd-primary-btn w-100">Log In</UiButton>
