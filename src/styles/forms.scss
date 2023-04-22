@@ -52,6 +52,17 @@ label,
         text-decoration: none;
         color: $primary;
     }
+    .pd-su-terms{
+        text-align: center;
+        @include fnt-dmsans(400, 0.8rem);
+        margin-top: 1rem;
+        color: $paraColor;
+        line-height: 1.3rem;
+        a{
+            color: $primary;
+            text-decoration: none;
+        }
+    }
 }
 
 .pd-log-with {

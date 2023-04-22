@@ -20,7 +20,9 @@ export const WebHeader = (props) => {
                             <Link to="/login">
                                 <UiButton className="pd-primary-btn-outlined">Login</UiButton>
                             </Link>
-                            <UiButton className="pd-primary-btn">Sign Up</UiButton>
+                            <Link to="/sign-up">
+                                <UiButton className="pd-primary-btn">Sign Up</UiButton>
+                            </Link>
                         </UiCol>
                     </UiRow>
                 </UiContainer>

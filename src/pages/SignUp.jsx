@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { UiButton } from "../components/Common/UiButtons";
 import { UiSocialLogin } from "../components/Login/UiSocialLogin";
 
-export const Login = (props) => {
+export const SignUp = (props) => {
     return (
         <>
             <WebHeader />
@@ -18,9 +18,9 @@ export const Login = (props) => {
                     <UiRow>
                         <UiCol lg="12" className="text-center">
                             <div className="pd-login-form text-left">
-                                <UiTitle>Log In</UiTitle>
-                                <p>New to CVWinner?
-                                    <Link to="/sign-up"> Create account here</Link></p>
+                                <UiTitle>Create a free account and launch your career</UiTitle>
+                                <p>Already have an account?
+                                    <Link to="/login"> Log in now</Link></p>
 
                                 <UiSocialLogin />
 
@@ -35,15 +35,13 @@ export const Login = (props) => {
                                     label="Password"
                                     type="password"
                                     className="w-100 pd-mui-input"
-                                />
+                                />                              
 
+                                <UiButton className="pd-primary-btn w-100">Sign up for free</UiButton>
 
-                                <div className="pd-flx-space-between">
-                                    <UiCheckBox label="Remember Me" />
-                                    <Link to="/" className="pd-forg-pw">Forgot Password</Link>
+                                <div className="pd-su-terms">
+                                    By clicking “Sign up for free!”, I expressly agree to the <Link to="/">Terms and Conditions</Link> and <Link to="/">Privacy Policy.</Link>
                                 </div>
-
-                                <UiButton className="pd-primary-btn w-100">Log In</UiButton>
                             </div>
                         </UiCol>
                     </UiRow>
