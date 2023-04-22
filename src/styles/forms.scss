@@ -12,8 +12,12 @@ label,
 }
 
 .pd-login-form {
-    @include desktop {
-        width: 40%;
+    padding: 3rem;
+    box-shadow: 0px 0px 30px -17px #00000047;
+    @include border-radius(1rem);
+
+    @include tablet {
+        width:520px;
     }
 
     margin: auto;
@@ -22,10 +26,11 @@ label,
     .pd-main-title {
         @include fnt-dmsans(600, 2rem);
         color: $mainFont;
+        margin-bottom: 1.2rem;
     }
 
     p {
-        @include fnt-dmsans(400, 1.2rem);
+        @include fnt-dmsans(400, 1.15rem);
         color: $paraColor;
 
         a {
@@ -43,7 +48,7 @@ label,
         margin-top: 1rem;
     }
     .pd-forg-pw{
-        @include fnt-dmsans(500, 0.9rem);
+        @include fnt-dmsans(500, 1rem);
         text-decoration: none;
         color: $primary;
     }
@@ -57,7 +62,7 @@ label,
         display: flex;
         border: 1px solid $borderGray;
         flex: 0 0 45%;
-        height: 50px;
+        height: 43px;
         text-align: center;
         justify-content: center;
         @include border-radius(2rem);
@@ -84,18 +89,19 @@ label,
 
 
         img {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
             margin-right: 8px;
         }
 
         span {
             margin-bottom: 0;
-            @include fnt-dmsans(400, 0.9rem);
-            color: $paraColor;
+            @include fnt-dmsans(400, 0.85rem);
+            color: $paraLightGray;
             text-transform: uppercase;
-            margin-bottom: -5px;
+            margin-bottom: -3px;
+            letter-spacing: 0.1rem;
         }
 
     }

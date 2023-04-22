@@ -24,20 +24,27 @@ $fnt-poppins-regular: 'Poppins', sans-serif;
 
 @mixin def-button($background, $color, $padding, $min-width, $border, $border-radius, $border-color,$text-transform) {
     min-width: $min-width;
-    background: $background;
+    background: $background !important;
     border-radius: $border-radius;
     padding: $padding;
     border: $border;
     text-align: center;
-    border-color: $border-color;
-    color: $color;
+    border-color: $border-color !important;
+    color: $color !important;
     transition: all 0.5s;
     text-transform: $text-transform;
 }
 
 $breakpoint-lg: 992px;
+$breakpoint-md: 768px;
 
 @mixin desktop{
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin tablet{
     @media (min-width: $breakpoint-lg) {
         @content;
     }

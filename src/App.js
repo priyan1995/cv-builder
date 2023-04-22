@@ -4,15 +4,25 @@ import { Home } from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/styles/style.scss';
 import { Login } from './pages/Login';
+import { ThemeProvider, createTheme } from '@mui/material';
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#fa7062'
+      }
+    }
+  });
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<Login />} />
-      </Routes>
-    </Router>
+    <ThemeProvider  theme={theme}>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
