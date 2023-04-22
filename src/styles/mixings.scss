@@ -34,3 +34,11 @@ $fnt-poppins-regular: 'Poppins', sans-serif;
     transition: all 0.5s;
     text-transform: $text-transform;
 }
+
+$breakpoint-lg: 992px;
+
+@mixin desktop{
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}

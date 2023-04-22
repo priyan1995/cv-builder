@@ -1,0 +1,107 @@
+.pd-mui-input {
+    margin-bottom: 1.5rem !important;
+    font-family: 'DM Sans', sans-serif !important;
+    @include fnt-dmsans(400, 0.875rem);
+}
+
+input,
+label,
+.MuiFormGroup-root span {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+.pd-login-form {
+    @include desktop {
+        width: 40%;
+    }
+
+    margin: auto;
+    display: inline-block;
+
+    .pd-main-title {
+        @include fnt-dmsans(600, 2rem);
+        color: $mainFont;
+    }
+
+    p {
+        @include fnt-dmsans(400, 1.2rem);
+        color: $paraColor;
+
+        a {
+            @include fnt-dmsans(500, 1.2rem);
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+
+    .pd-primary-btn {
+        padding: 0.7rem;
+        @include border-radius(2rem);
+        text-transform: uppercase;
+        @include fnt-dmsans(400, 1rem);
+        margin-top: 1rem;
+    }
+}
+
+.pd-log-with {
+    margin: 1rem 0;
+
+    &__icon-card {
+        align-items: center;
+        display: flex;
+
+        img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        span {
+            margin-bottom: 0;
+            @include fnt-dmsans(400, 0.8rem);
+            color: $paraColor;
+            text-transform: uppercase;
+
+            &:last-child {
+                margin-bottom: -5px;
+            }
+        }
+
+    }
+
+    &__pd-sep-or {
+        text-align: center;
+        position: relative;
+        margin: 1rem 0 1.5rem;
+
+        p {
+            @include fnt-dmsans(400, 0.875rem);
+            text-transform: uppercase;
+            position: relative;
+            margin-bottom: 0;
+            color: $paraLightGray;
+            letter-spacing: 3px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 45%;
+                height: 1px;
+                background: #969b9e52;
+                top: 50%;
+                right: 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 45%;
+                height: 1px;
+                background: #969b9e52;
+                top: 50%;
+                left:0;
+            }
+
+        }
+    }
+}
