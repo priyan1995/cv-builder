@@ -1,15 +1,78 @@
-.pd-cv-format{
-    .pd-cv-top-bar{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &__left{
-            flex: 0 0 50%;
-            max-width: 50%;
+.pd-cv-format {
+    .pd-cv-wrapper {
+        box-shadow: rgb(217, 221, 224) 0px 0px 34px 0px;
+        padding: 2.5rem;
+
+        .pd-cv-left {
+            flex: 0 0 40%;
+            max-width: 40%;
         }
-        &__right{
-            flex: 0 0 50%;
-            max-width: 50%;
+
+        .pd-cv-right {
+            flex: 0 0 60%;
+            max-width: 60%;
+            justify-content: flex-end;
+            display: flex;
+        }
+
+ 
+
+        &__top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+
+            .pd-cv-left {
+              
+                h2 {
+                    @include fnt-poppins(600, 1.5rem);
+                    margin-bottom: 2px;
+                    color: $paraColor;
+                }
+
+                p {
+                    @include fnt-dmsans(500, 0.875rem);
+                    color: $paraColor;
+                }
+            }
+
+            .pd-cv-right {              
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                div {
+                    p {
+                        @include fnt-dmsans(500, 0.875rem);
+                        margin-bottom: 0;
+                        color: $paraColor;
+                    }
+
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: contain;
+                    margin-left: 1rem;
+                }
+
+            }
+        }
+        &__inner-desc {
+            .cv-sec-title{
+                @include fnt-dmsans(600, 1.2rem);
+                color: $paraColor;
+            }
+    
+            .pd-cv-desc{
+                @include fnt-dmsans(400, 0.75rem);
+                color: $paraColor;
+                line-height: 1.3rem;
+            }
+    
         }
     }
 }
