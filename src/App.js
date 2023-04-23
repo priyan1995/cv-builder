@@ -6,6 +6,7 @@ import '../src/styles/style.scss';
 import { Login } from './pages/Login';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { SignUp } from './pages/SignUp';
+import { CvBuilder } from './pages/CvBuilder';
 
 function App() {
   const theme = createTheme({
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/sign-up" element={<SignUp />} />
+          <Route exact path="/cv" element={<CvBuilder />} />
         </Routes>
       </Router>
     </ThemeProvider>
