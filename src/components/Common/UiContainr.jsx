@@ -4,9 +4,19 @@ import Container from 'react-bootstrap/Container';
 export const UiContainer = (props) => {
     return (
         <>
-            <Container>
-                {props.children}
-            </Container>
+            {
+                props.fluid ?
+                    <Container fluid>
+                        {props.children}
+                    </Container>
+                    :
+
+                    <Container>
+                        {props.children}
+                    </Container>
+
+            }
+
         </>
     )
 }
