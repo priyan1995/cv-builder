@@ -1,0 +1,15 @@
+.pd-cv-format{
+    .pd-cv-top-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__left{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        &__right{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+}
