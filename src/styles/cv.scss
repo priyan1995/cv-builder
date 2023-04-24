@@ -62,8 +62,11 @@
             }
         }
         &__inner-desc {
+            padding: 1rem 0;
+            border-top: 0.1rem dashed gray;
+            border-bottom: 0.1rem dashed gray;
             .cv-sec-title{
-                @include fnt-dmsans(600, 1.2rem);
+                @include fnt-dmsans(600, 1rem);
                 color: $paraColor;
             }
     
@@ -71,6 +74,7 @@
                 @include fnt-dmsans(400, 0.75rem);
                 color: $paraColor;
                 line-height: 1.3rem;
+                margin-bottom: 0;
             }
     
         }
