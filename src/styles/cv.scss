@@ -6,18 +6,17 @@
         // =========== left
         .pd-cv-left {
             flex: 0 0 40%;
-            max-width: 40%;
-            
+            max-width: 40%;            
             padding: 1rem 0;
 
             .pd-ls-loc {
-                @include fnt-dmsans(500, 0.875rem);
+                @include fnt-dmsans(500, 0.775rem);
                 color: $paraColor;
                 margin-bottom: 0;
             }
 
             .pd-ls-duration {
-                @include fnt-dmsans(500, 0.875rem);
+                @include fnt-dmsans(500, 0.775rem);
                 color: $paraColor;
                 margin-bottom: 0;
                 font-style: italic;
@@ -36,17 +35,17 @@
 
             .pd-desc-lg{
                 h5{
-                     @include fnt-dmsans(600, 1rem);
+                     @include fnt-dmsans(600, 0.9rem);
                      margin-bottom: 0.2rem;
                      color: $paraColor;
                 }
                 h6{
-                     @include fnt-dmsans(600, 0.85rem);
+                     @include fnt-dmsans(600, 0.75rem);
                      color: $paraColor;
                      margin-bottom: 0.5rem;
                 }
                 p{
-                     @include fnt-dmsans(400, 0.875rem);
+                     @include fnt-dmsans(400, 0.775rem);
                      color: $paraColor;
                      margin-bottom: 0;
                 }
@@ -65,13 +64,13 @@
             .pd-cv-left {
 
                 h2 {
-                    @include fnt-poppins(600, 1.5rem);
+                    @include fnt-poppins(600, 1.2rem);
                     margin-bottom: 2px;
                     color: $paraColor;
                 }
 
                 p {
-                    @include fnt-dmsans(500, 0.875rem);
+                    @include fnt-dmsans(500, 0.775rem);
                     color: $paraColor;
                 }
 
@@ -84,7 +83,7 @@
 
                 div {
                     p {
-                        @include fnt-dmsans(500, 0.875rem);
+                        @include fnt-dmsans(500, 0.775rem);
                         margin-bottom: 0;
                         color: $paraColor;
                     }
