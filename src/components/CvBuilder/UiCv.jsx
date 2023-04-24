@@ -5,6 +5,7 @@ import profileImg from '../../styles/img/profile.jpg';
 import { Objectives } from "./Format1/Objectives";
 import { Experience } from "./Format1/Experience";
 import { Education } from "./Format1/Education";
+import { Languages } from "./Format1/Languages";
 
 export const UiCv = (props) => {
     return (
@@ -29,6 +30,7 @@ export const UiCv = (props) => {
                     <Objectives />
                     <Experience />
                     <Education />
+                    <Languages />
                 </div>
             </section>
         </>
