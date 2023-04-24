@@ -6,6 +6,8 @@ import { Objectives } from "./Format1/Objectives";
 import { Experience } from "./Format1/Experience";
 import { Education } from "./Format1/Education";
 import { Languages } from "./Format1/Languages";
+import { Skills } from "./Format1/Skills";
+import { Other } from "./Format1/Other";
 
 export const UiCv = (props) => {
     return (
@@ -31,6 +33,11 @@ export const UiCv = (props) => {
                     <Experience />
                     <Education />
                     <Languages />
+                    <Skills />
+                    <Other
+                        title="Other"
+                        desc=" Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces."
+                    />
                 </div>
             </section>
         </>

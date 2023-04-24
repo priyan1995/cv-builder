@@ -1,7 +1,7 @@
 .pd-cv-format {
     .pd-cv-wrapper {
         box-shadow: rgb(217, 221, 224) 0px 0px 34px 0px;
-        padding: 2.5rem;
+        padding: 3rem;
 
         // =========== left
         .pd-cv-left {
@@ -116,6 +116,24 @@
                 color: $paraColor;
                 line-height: 1.3rem;
                 margin-bottom: 0;
+            }
+
+            .pd-skills-set{
+                h6{
+                    margin: 5px 0;
+                }
+               
+                &__item{
+                    display: flex;
+                    div{
+                        @include fnt-dmsans(400, 0.7rem);
+                        color: $paraColor;
+                        background: $lightExGray;
+                        margin: 5px;
+                        border-radius: 5px;
+                        padding: 4px 10px;
+                    }
+                }
             }
 
         }
