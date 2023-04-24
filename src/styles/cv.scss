@@ -7,6 +7,8 @@
         .pd-cv-left {
             flex: 0 0 40%;
             max-width: 40%;
+            
+            padding: 1rem 0;
 
             .pd-ls-loc {
                 @include fnt-dmsans(500, 0.875rem);
@@ -29,7 +31,8 @@
         .pd-cv-right {
             flex: 0 0 60%;
             max-width: 60%;
-            display: flex;
+            display: flex;            
+            padding: 1rem 0;
 
             .pd-desc-lg{
                 h5{
@@ -99,8 +102,8 @@
         }
 
         &__inner-desc {
-            padding: 1rem 0;
             border-top: 0.1rem dashed gray;
+            flex-wrap: wrap;
 
             .cv-sec-title {
                 @include fnt-dmsans(600, 1rem);

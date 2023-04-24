@@ -1,10 +1,11 @@
 import React from "react";
+import { UiCvItem } from "../UiCvItem";
 
 export const Experience = (props) => {
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
-                <div className="pd-cv-left">
+                {/* <div className="pd-cv-left">
                     <h4 className="cv-sec-title">Experience</h4>
                     <p className="pd-ls-loc">
                         San Fransisco, CA
@@ -20,7 +21,8 @@ export const Experience = (props) => {
                      <p>experience in crafting and testing user-friendly interfaces, debugging and updating existing projects</p>
 
                     </div>
-                </div>
+                </div> */}
+                <UiCvItem> </UiCvItem>
             </div>
         </>
     )
