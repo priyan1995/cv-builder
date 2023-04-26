@@ -138,3 +138,23 @@
         }
     }
 }
+
+.pd-cv-left-6{
+    padding: 5% 30px;
+    .pd-cv-inp-form-wrapper{
+        .pd-cv-desc{
+            @include fnt-dmsans(400, 1rem);
+            color: $paraColor;
+        }
+        .pd-form-inp-title{
+            @include fnt-dmsans(700, 1.3rem);
+            color: $paraColor;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+    }
+   
+}
+.pd-cv-right-6{
+    padding: 5% 30px;
+}

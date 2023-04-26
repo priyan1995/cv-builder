@@ -12,7 +12,7 @@ import { Other } from "./Format1/Other";
 export const UiCv = (props) => {
     return (
         <>
-            <section className="pd-cv-format pd-padd">
+            <section className="pd-cv-format ">
                 <div className="pd-cv-wrapper">
 
                     <div className="pd-cv-wrapper__top-bar">
