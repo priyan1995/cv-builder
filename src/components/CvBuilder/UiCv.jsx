@@ -17,7 +17,7 @@ export const UiCv = (props) => {
 
                     <div className="pd-cv-wrapper__top-bar">
                         <div className="pd-cv-left">
-                            <h2>Priyan Darshana</h2>
+                            <h2>{props.firstName} {props.lastName}</h2>
                             <p>Web Developer</p>
                         </div>
                         <div className="pd-cv-right">

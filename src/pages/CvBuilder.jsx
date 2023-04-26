@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { WebHeader } from "../components/Common/WebHeader";
 import { UiContainer } from "../components/Common/UiContainr";
 import { UiRow } from "../components/Common/UiRow";
@@ -8,6 +8,10 @@ import { UiTitle } from "../components/Common/UiTitle";
 import { UiDateInput, UiTextInput } from "../components/Common/UiInput";
 
 export const CvBuilder = () => {
+
+    const [ firstName, setFirstName ] = useState('Priyan');
+    const [ lastName, setLastName ] = useState('Darshana');
+
     return (
         <>
             <WebHeader />
@@ -28,6 +32,7 @@ export const CvBuilder = () => {
                                             label="First Name"
                                             type="text"
                                             className="w-100 pd-mui-input"
+                                            onChange={(e)=>setFirstName(e.target.value)}
                                         />
                                     </UiCol>
                                     <UiCol lg="6">
@@ -39,6 +44,7 @@ export const CvBuilder = () => {
                                             label="Last Name"
                                             type="text"
                                             className="w-100 pd-mui-input"
+                                            onChange={(e)=>setLastName(e.target.value)}
                                         />
                                     </UiCol>
 
@@ -102,7 +108,11 @@ export const CvBuilder = () => {
 
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
-                        <UiCv />
+                        <UiCv
+                        firstName={firstName}
+                        lastName={lastName}
+                        
+                        />
                     </UiCol>
                 </UiRow>
             </UiContainer>

@@ -14,6 +14,8 @@ export const UiTextInput = (props) => {
                 label={props.label}
                 type={props.type}
                 className={props.className}
+                value={props.value}
+                onChange={props.onChange}
             />
 
         </>
