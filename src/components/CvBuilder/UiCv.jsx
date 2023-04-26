@@ -18,13 +18,13 @@ export const UiCv = (props) => {
                     <div className="pd-cv-wrapper__top-bar">
                         <div className="pd-cv-left">
                             <h2>{props.firstName} {props.lastName}</h2>
-                            <p>Web Developer</p>
+                            <p>{props.occupation}</p>
                         </div>
                         <div className="pd-cv-right">
                             <div>
-                                <p><strong>Email: </strong>priyan@gmail.com</p>
-                                <p><strong>Address: </strong>No.120, Kottawa, Pannipitiya.</p>
-                                <p><strong>Phone: </strong>0741251125</p>
+                                <p><strong>Email: </strong>{props.email}</p>
+                                <p><strong>Address: </strong>{props.address}</p>
+                                <p><strong>Phone: </strong>{props.phone}</p>
                             </div>
                             <img src={profileImg} />
                         </div>

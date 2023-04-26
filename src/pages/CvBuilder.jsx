@@ -9,8 +9,12 @@ import { UiDateInput, UiTextInput } from "../components/Common/UiInput";
 
 export const CvBuilder = () => {
 
-    const [ firstName, setFirstName ] = useState('Priyan');
-    const [ lastName, setLastName ] = useState('Darshana');
+    const [firstName, setFirstName] = useState('Priyan');
+    const [lastName, setLastName] = useState('Darshana');
+    const [occupation, setOccupation] = useState('Web Developer');
+    const [email, setEmail] = useState('priyan@gmail.com');
+    const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
+    const [phone, setPhone] = useState('0741251125');
 
     return (
         <>
@@ -32,7 +36,7 @@ export const CvBuilder = () => {
                                             label="First Name"
                                             type="text"
                                             className="w-100 pd-mui-input"
-                                            onChange={(e)=>setFirstName(e.target.value)}
+                                            onChange={(e) => setFirstName(e.target.value)}
                                         />
                                     </UiCol>
                                     <UiCol lg="6">
@@ -44,7 +48,7 @@ export const CvBuilder = () => {
                                             label="Last Name"
                                             type="text"
                                             className="w-100 pd-mui-input"
-                                            onChange={(e)=>setLastName(e.target.value)}
+                                            onChange={(e) => setLastName(e.target.value)}
                                         />
                                     </UiCol>
 
@@ -53,20 +57,16 @@ export const CvBuilder = () => {
                                             label="Occupation"
                                             type="text"
                                             className="w-100 pd-mui-input"
+                                            onChange={(e) => setOccupation(e.target.value)}
                                         />
                                     </UiCol>
+
                                     <UiCol lg="12">
                                         <UiTextInput
                                             label="Address"
                                             type="text"
                                             className="w-100 pd-mui-input"
-                                        />
-                                    </UiCol>
-                                    <UiCol lg="12">
-                                        <UiTextInput
-                                            label="Occupation"
-                                            type="text"
-                                            className="w-100 pd-mui-input"
+                                            onChange={(e) => setAddress(e.target.value)}
                                         />
                                     </UiCol>
                                     <UiCol lg="6">
@@ -74,6 +74,7 @@ export const CvBuilder = () => {
                                             label="Phone"
                                             type="text"
                                             className="w-100 pd-mui-input"
+                                            onChange={(e) => setPhone(e.target.value)}
                                         />
                                     </UiCol>
 
@@ -82,6 +83,7 @@ export const CvBuilder = () => {
                                             label="Email"
                                             type="email"
                                             className="w-100 pd-mui-input"
+                                            onChange={(e) => setEmail(e.target.value)}
                                         />
                                     </UiCol>
 
@@ -109,9 +111,13 @@ export const CvBuilder = () => {
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
                         <UiCv
-                        firstName={firstName}
-                        lastName={lastName}
-                        
+                            firstName={firstName}
+                            lastName={lastName}
+                            occupation={occupation}
+                            email={email}
+                            address={address}
+                            phone={phone}
+
                         />
                     </UiCol>
                 </UiRow>
