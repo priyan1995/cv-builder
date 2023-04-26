@@ -1,8 +1,10 @@
 import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Input, TextField } from "@mui/material";
 import React from "react";
 import { pink } from '@mui/material/colors';
-
-
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export const UiTextInput = (props) => {
     return (
@@ -31,6 +33,18 @@ export const UiCheckBox = (props) => {
                     }}
                 />} label={props.label} />
             </FormGroup>
+        </>
+    )
+}
+
+export const UiDateInput = (props) => {
+    return (
+        <>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={['DatePicker']}>
+                    <DatePicker label={props.label} className={props.className} />
+                </DemoContainer>
+            </LocalizationProvider>
         </>
     )
 }

@@ -5,7 +5,7 @@ import { UiRow } from "../components/Common/UiRow";
 import { UiCol } from "../components/Common/UiCol";
 import { UiCv } from "../components/CvBuilder/UiCv";
 import { UiTitle } from "../components/Common/UiTitle";
-import { UiTextInput } from "../components/Common/UiInput";
+import { UiDateInput, UiTextInput } from "../components/Common/UiInput";
 
 export const CvBuilder = () => {
     return (
@@ -26,10 +26,74 @@ export const CvBuilder = () => {
                                     <UiCol lg="6">
                                         <UiTextInput
                                             label="First Name"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+                                    <UiCol lg="6">
+
+                                    </UiCol>
+
+                                    <UiCol lg="6">
+                                        <UiTextInput
+                                            label="Last Name"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+
+                                    <UiCol lg="12">
+                                        <UiTextInput
+                                            label="Occupation"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+                                    <UiCol lg="12">
+                                        <UiTextInput
+                                            label="Address"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+                                    <UiCol lg="12">
+                                        <UiTextInput
+                                            label="Occupation"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+                                    <UiCol lg="6">
+                                        <UiTextInput
+                                            label="Phone"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+
+                                    <UiCol lg="6">
+                                        <UiTextInput
+                                            label="Email"
                                             type="email"
                                             className="w-100 pd-mui-input"
                                         />
                                     </UiCol>
+
+                                    <UiCol lg="12">
+                                        <UiDateInput
+                                            label="Date of Birth"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+
+                                    <UiCol lg="12">
+                                        <UiTextInput
+                                            label="Link"
+                                            type="text"
+                                            className="w-100 pd-mui-input"
+                                        />
+                                    </UiCol>
+
                                 </UiRow>
                             </form>
 
