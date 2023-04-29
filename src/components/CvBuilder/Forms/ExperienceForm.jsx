@@ -51,7 +51,7 @@ export const ExperienceForm = (props) => {
                                 label="Location"
                                 type="text"
                                 className="w-100 pd-mui-input"
-                                onChange={(e) => setPeriod(e.target.value)}
+                                onChange={(e) => setLocation(e.target.value)}
                                 defaultValue={location}
                             />
                         </UiCol>
