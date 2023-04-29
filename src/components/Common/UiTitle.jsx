@@ -18,4 +18,12 @@ export const UiSubtitle = (props) => {
             </h2>
         </>
     )
-} 
+}
+
+export const UiCvSecTitle = (props) => {
+    return (
+        <>
+            <h4 className="cv-sec-title">{props.title}</h4>
+        </>
+    )
+}

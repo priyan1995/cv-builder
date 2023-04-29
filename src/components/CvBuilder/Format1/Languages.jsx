@@ -1,13 +1,13 @@
 import React from "react";
 import { UiCvItem } from "../UiCvItem";
+import { UiCvSecTitle } from "../../Common/UiTitle";
 
 export const Languages = (props) => {
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
-                <UiCvItem
-                    title="Languages"
-                >
+                <UiCvSecTitle title="Languages" />
+                <UiCvItem  >
                     <h5>English</h5>
                     <h6>Fluent</h6>
                     <p>Advance Diploma in University of Colombo</p>

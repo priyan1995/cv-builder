@@ -10,8 +10,6 @@ export const ObjectivesForm = (props) => {
     const objective = props.objective;
     const setObjective = props.setObjective;
 
-    console.log(objective)
-
     return (
         <>
             <div className="pd-cv-inp-form-wrapper">

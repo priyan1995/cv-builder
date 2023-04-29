@@ -1,12 +1,13 @@
 import React from "react";
 import { UiCvItem } from "../UiCvItem";
+import { UiCvSecTitle } from "../../Common/UiTitle";
 
 export const Education = (props) => {
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
+                <UiCvSecTitle title="Education" />
                 <UiCvItem
-                    title="Education"
                     location="San Fransisco, CA"
                     duration="Jan 2013 - Mar 2017"
                 >

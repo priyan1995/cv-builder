@@ -1,5 +1,6 @@
 import React from "react";
 import { UiCvItem } from "../UiCvItem";
+import { UiCvSecTitle } from "../../Common/UiTitle";
 
 export const Skills = (props) => {
     const skillItems = {
@@ -16,9 +17,8 @@ export const Skills = (props) => {
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
-                <UiCvItem
-                    title="Skills"
-                >
+                <UiCvSecTitle title="Skills" />
+                <UiCvItem>
                     {
                         allSKills.map((item) => {
                             return (
