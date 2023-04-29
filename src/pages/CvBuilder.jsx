@@ -23,6 +23,13 @@ export const CvBuilder = () => {
 
     //  console.log(date);
 
+    const [viewPersonalInfo, setViewPersonalInfo] = useState(true);
+
+    const OnsaveFormOne = () => {
+        console.log('saved');
+        setViewPersonalInfo(false);
+    }
+
     return (
         <>
             <WebHeader />
@@ -31,25 +38,30 @@ export const CvBuilder = () => {
                     <UiCol lg="6" className="pd-padd pd-cv-left-6">
 
 
+                        {
+                            viewPersonalInfo &&
+                            <ContactInfoForm
+                                title="Tell us a little about yourself"
+                                description="Let us know who you are, how employers can get in touch with you, and what your profession is."
+                                firstName={firstName}
+                                setFirstName={setFirstName}
+                                lastName={lastName}
+                                setLastName={setLastName}
+                                occupation={occupation}
+                                setOccupation={setOccupation}
+                                email={email}
+                                setEmail={setEmail}
+                                address={address}
+                                setAddress={setAddress}
+                                phone={phone}
+                                setPhone={setPhone}
+                                date={date}
+                                setDate={setDate}
+                                onClick={OnsaveFormOne}
+                                SaveBttonText="Save Contact Detail"
+                            />
+                        }
 
-                        <ContactInfoForm
-                            title="Tell us a little about yourself"
-                            description="Let us know who you are, how employers can get in touch with you, and what your profession is."
-                            firstName={firstName}
-                            setFirstName={setFirstName}
-                            lastName={lastName}
-                            setLastName={setLastName}
-                            occupation={occupation}
-                            setOccupation={setOccupation}
-                            email={email}
-                            setEmail={setEmail}
-                            address={address}
-                            setAddress={setAddress}
-                            phone={phone}
-                            setPhone={setPhone}
-                            date={date}
-                            setDate={setDate}
-                        />
 
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">

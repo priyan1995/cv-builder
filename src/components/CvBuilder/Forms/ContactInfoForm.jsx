@@ -3,6 +3,7 @@ import { UiRow } from "../../Common/UiRow";
 import { UiCol } from "../../Common/UiCol";
 import { UiDateInput, UiTextInput } from "../../Common/UiInput";
 import { UiTitle } from "../../Common/UiTitle";
+import { UiButton } from "../../Common/UiButtons";
 
 export const ContactInfoForm = (props) => {
 
@@ -100,6 +101,10 @@ export const ContactInfoForm = (props) => {
                                 className="w-100 pd-mui-input"
 
                             />
+                        </UiCol>
+
+                        <UiCol lg="12">
+                            <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                         </UiCol>
 
                     </UiRow>
