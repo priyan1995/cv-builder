@@ -12,7 +12,7 @@ import { ObjectivesForm } from "../components/CvBuilder/Forms/ObjectivesForm";
 
 export const CvBuilder = () => {
 
-    const objectives = [`Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces, debugging and updating existing projects, and ensuring customer satisfaction. Looking forward to demonstrating my proven abilities in optimizing web functionalities in a challenging and motivating work environment.`];
+    const objs = [`Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces, debugging and updating existing projects, and ensuring customer satisfaction. Looking forward to demonstrating my proven abilities in optimizing web functionalities in a challenging and motivating work environment.`];
 
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
@@ -21,7 +21,7 @@ export const CvBuilder = () => {
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
     const [phone, setPhone] = useState('0741251125');
     const [date, setDate] = useState();
-    const [objective, setObjective] = useState(objectives);
+    const [objective, setObjective] = useState(objs);
 
     // const [date, setDate] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
 
@@ -102,7 +102,7 @@ export const CvBuilder = () => {
                             email={email}
                             address={address}
                             phone={phone}
-                            objectives={objectives}
+                            objective={objective}
 
                         />
                     </UiCol>

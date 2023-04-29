@@ -9,7 +9,7 @@ export const Objectives = (props) => {
                 </div>
                 <div className="pd-cv-right">
                     <div>
-                        <p className="pd-cv-desc">{props.objectives}</p>
+                        <p className="pd-cv-desc">{props.objective}</p>
                     </div>
                 </div>
             </div>
