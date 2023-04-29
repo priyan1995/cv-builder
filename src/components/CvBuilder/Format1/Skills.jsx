@@ -13,7 +13,7 @@ export const Skills = (props) => {
 
     const allSKills = skillItems.data;
 
-    console.log(allSKills)
+    //console.log(allSKills)
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">

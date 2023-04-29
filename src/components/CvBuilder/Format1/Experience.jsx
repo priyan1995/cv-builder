@@ -3,23 +3,16 @@ import { UiCvItem } from "../UiCvItem";
 import { UiCvSecTitle, UiTitle } from "../../Common/UiTitle";
 import { useState } from "react";
 
-export const Experience = (props) => {
+export const Experience = (props) => {   
 
-    const experienceArr = {
-        data: [
-            { id: '1', position: 'Sales Associate', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' },
-            { id: '1', position: 'Sales Associate', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' }
-        ]
-    }
-
-    const [experience, setExperience] = useState(experienceArr);
+    const experience = props.experience;
 
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
                <UiCvSecTitle title="Experience" />
                 {
-                    experience.data.map((item) => {
+                    experience.map((item) => {
                         return (
                             <>
                                 <UiCvItem
