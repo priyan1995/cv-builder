@@ -12,7 +12,6 @@ export const Experience = (props) => {
         ]
     }
 
-
     return (
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
@@ -22,11 +21,11 @@ export const Experience = (props) => {
                         return (
                             <>
                                 <UiCvItem
-                                    location="San Fransisco, CA"
-                                    duration="Jan 2015 - Mar 2018">
+                                    location={item.location}
+                                    duration={item.period}>
                                     <h5>{item.position}</h5>
-                                    <h6>Louis Vuitton</h6>
-                                    <p>experience in crafting and testing user-friendly interfaces, debugging and updating existing projects</p>
+                                    <h6>{item.companyName}</h6>
+                                    <p>{item.desc}</p>
                                 </UiCvItem>
                             </>
                         )
