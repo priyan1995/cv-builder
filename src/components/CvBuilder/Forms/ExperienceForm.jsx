@@ -7,11 +7,6 @@ import { UiButton } from "../../Common/UiButtons";
 
 export const ExperienceForm = (props) => {
 
-    // const [position, setPosition] = useState('');
-    // const [compName, setCompanyName] = useState('');
-    // const [location, setLocation] = useState('');
-    // const [period, setPeriod] = useState('');
-    // const [description, setDescription] = useState('');
 
     const position = props.position;
     const setPosition = props.setPosition;

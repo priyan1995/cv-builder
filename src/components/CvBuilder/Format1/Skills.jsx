@@ -18,13 +18,16 @@ export const Skills = (props) => {
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
                 <UiCvSecTitle title="Skills" />
-                <UiCvItem>
-                    {
-                        allSKills.map((item) => {
-                            return (
-                                <>
-                                    <div className="pd-skills-set" key={item.id}>
-                                        <h6>{item.name}</h6>
+
+                {
+                    allSKills.map((item) => {
+                        return (
+                            <>
+                                <UiCvItem
+                                    key={item.id}
+                                    location={item.name}>
+
+                                    <div className="pd-skills-set" >
                                         <div className="pd-skills-set__item">
                                             {
                                                 item.skillsIt.map((sk, index) => {
@@ -36,14 +39,14 @@ export const Skills = (props) => {
 
                                         </div>
                                     </div>
-                                </>
-                            )
+                                </UiCvItem>
+                            </>
+                        )
 
-                        })
-                    }
+                    })
+                }
 
-                </UiCvItem>
-            </div>
+        </div >
         </>
     )
 }

@@ -7,15 +7,16 @@ export const Languages = (props) => {
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
                 <UiCvSecTitle title="Languages" />
-                <UiCvItem  >
-                    <h5>English</h5>
+                <UiCvItem
+                    location="Enlgish"
+                >
                     <h6>Fluent</h6>
                     <p>Advance Diploma in University of Colombo</p>
                 </UiCvItem>
 
                 <UiCvItem
+                    location="French"
                 >
-                    <h5>French</h5>
                     <h6>Fluent</h6>
                     <p>Diploma in University of Colombo</p>
                 </UiCvItem>

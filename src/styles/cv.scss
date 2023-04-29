@@ -31,7 +31,7 @@
             flex: 0 0 60%;
             max-width: 60%;
             display: flex;            
-            padding: 1rem 0;
+            padding: 0.7rem 0;
 
             .pd-desc-lg{
                 h5{
@@ -128,7 +128,7 @@
                         @include fnt-dmsans(400, 0.7rem);
                         color: $paraColor;
                         background: $lightExGray;
-                        margin: 5px;
+                        margin: 0 5px;
                         border-radius: 5px;
                         padding: 4px 10px;
                     }
