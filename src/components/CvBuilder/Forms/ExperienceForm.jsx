@@ -7,11 +7,22 @@ import { UiButton } from "../../Common/UiButtons";
 
 export const ExperienceForm = (props) => {
 
-    const [position, setPosition] = useState('');
-    const [compName, setCompanyName] = useState('');
-    const [location, setLocation] = useState('');
-    const [period, setPeriod] = useState('');
-    const [description, setDescription] = useState('');
+    // const [position, setPosition] = useState('');
+    // const [compName, setCompanyName] = useState('');
+    // const [location, setLocation] = useState('');
+    // const [period, setPeriod] = useState('');
+    // const [description, setDescription] = useState('');
+
+    const position = props.position;
+    const setPosition = props.setPosition;
+    const compName = props.compName;
+    const setCompanyName = props.setCompanyName;
+    const location = props.location;
+    const setLocation = props.setLocation;
+    const period = props.period;
+    const setPeriod = props.setPeriod;
+    const jobDescription = props.jobDescription;
+    const setJobDescription = props.setJobDescription;
 
 
     return (
@@ -72,8 +83,8 @@ export const ExperienceForm = (props) => {
                                 placeholder="Description"
                                 minRows="5"
                                 className="w-100 pd-mui-input"
-                                onChange={(e) => setDescription(e.target.value)}
-                                defaultValue={description}
+                                onChange={(e) => setJobDescription(e.target.value)}
+                                defaultValue={jobDescription}
                             />
                         </UiCol>
 

@@ -16,12 +16,13 @@ import { ExperienceData } from "../mockData/Experience";
 export const CvBuilder = () => {
 
     const objs = Objectives;
-    
+
     const experienceArr = ExperienceData;
 
-    const newElement =  { id: '3', position: 'New Pos', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' }
-        
+    const newElement = { id: '3', position: 'New Pos', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' }
 
+
+    // personal Info
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
     const [occupation, setOccupation] = useState('Web Developer');
@@ -29,10 +30,20 @@ export const CvBuilder = () => {
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
     const [phone, setPhone] = useState('0741251125');
     const [date, setDate] = useState();
+
+    // objectives
     const [objective, setObjective] = useState(objs);
 
-    // const [date, setDate] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
+    // experience
+    const [experience, setExperience] = useState(experienceArr);
+    const [position, setPosition] = useState('');
+    const [compName, setCompanyName] = useState('');
+    const [location, setLocation] = useState('');
+    const [period, setPeriod] = useState('');
+    const [jobDescription, setJobDescription] = useState('');
 
+
+    // const [date, setDate] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
     //  console.log(date);
 
     const [viewPersonalInfo, setViewPersonalInfo] = useState(true);
@@ -48,11 +59,6 @@ export const CvBuilder = () => {
         console.log('saved Objective');
     }
 
-
-
-    const [experience, setExperience] = useState(experienceArr);
-
-    const exper = experience;
 
     const onSaveExp = () => {
         console.log("saved Experience");
@@ -111,7 +117,19 @@ export const CvBuilder = () => {
                             description="Great! Let's fill out your work experience next"
                             SaveBttonText="Add Experience"
                             onClick={onSaveExp}
+                            position={position}
+                            setPosition={setPosition}
+                            compName={compName}
+                            setCompanyName={setCompanyName}
+                            location={location}
+                            setLocation={setLocation}
+                            period={period}
+                            setPeriod={setPeriod}
+                            jobDescription={jobDescription}
+                            setJobDescription={setJobDescription}
                         />
+                        
+
 
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
@@ -123,7 +141,7 @@ export const CvBuilder = () => {
                             address={address}
                             phone={phone}
                             objective={objective}
-                            exper={exper}
+                            exper={experience}
                         />
                     </UiCol>
                 </UiRow>

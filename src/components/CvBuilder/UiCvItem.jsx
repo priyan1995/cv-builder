@@ -3,7 +3,7 @@ import React from "react";
 export const UiCvItem = (props) => {
     return (
         <>
-            <div className="pd-cv-left">
+            <div className="pd-cv-left" >
                 {
                     props.title &&  <h4 className="cv-sec-title">{props.title}</h4>
                 }

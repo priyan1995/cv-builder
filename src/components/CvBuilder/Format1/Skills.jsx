@@ -23,17 +23,17 @@ export const Skills = (props) => {
                         allSKills.map((item) => {
                             return (
                                 <>
-                                    <div className="pd-skills-set">
+                                    <div className="pd-skills-set" key={item.id}>
                                         <h6>{item.name}</h6>
                                         <div className="pd-skills-set__item">
                                             {
-                                                item.skillsIt.map((sk) => {
+                                                item.skillsIt.map((sk, index) => {
                                                     return (
-                                                        <div>{sk}</div>
+                                                        <div key={index}>{sk}</div>
                                                     )
                                                 })
                                             }
-                                            
+
                                         </div>
                                     </div>
                                 </>
