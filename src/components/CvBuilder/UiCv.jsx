@@ -29,7 +29,9 @@ export const UiCv = (props) => {
                             <img src={profileImg} />
                         </div>
                     </div>
-                    <Objectives />
+                    <Objectives
+                        objectives={props.objectives}
+                    />
                     <Experience />
                     <Education />
                     <Languages />

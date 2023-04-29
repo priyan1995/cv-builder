@@ -7,6 +7,11 @@ import { UiButton } from "../../Common/UiButtons";
 
 export const ObjectivesForm = (props) => {
 
+    const objective = props.objective;
+    const setObjective = props.setObjective;
+
+    console.log(objective)
+
     return (
         <>
             <div className="pd-cv-inp-form-wrapper">
@@ -24,7 +29,10 @@ export const ObjectivesForm = (props) => {
                             <UiTextArea
                                 placeholder="Type Objective Here"
                                 minRows="5"
-                                className="w-100 pd-mui-input" />
+                                className="w-100 pd-mui-input"
+                                onChange={(e)=>setObjective(e.target.value)}
+                                defaultValue={props.objective}
+                                />
                         </UiCol>
 
                         <UiCol lg="12">

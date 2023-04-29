@@ -12,6 +12,8 @@ import { ObjectivesForm } from "../components/CvBuilder/Forms/ObjectivesForm";
 
 export const CvBuilder = () => {
 
+    const objectives = [`Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces, debugging and updating existing projects, and ensuring customer satisfaction. Looking forward to demonstrating my proven abilities in optimizing web functionalities in a challenging and motivating work environment.`];
+
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
     const [occupation, setOccupation] = useState('Web Developer');
@@ -19,16 +21,19 @@ export const CvBuilder = () => {
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
     const [phone, setPhone] = useState('0741251125');
     const [date, setDate] = useState();
+    const [objective, setObjective] = useState(objectives);
 
     // const [date, setDate] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
 
     //  console.log(date);
 
     const [viewPersonalInfo, setViewPersonalInfo] = useState(true);
+    const [viewObjectives, setViewObjectives] = useState(false);
 
     const OnsaveFormOne = () => {
         console.log('saved Contact');
         setViewPersonalInfo(false);
+        setViewObjectives(true);
     }
 
     const OnsaveObjective = () => {
@@ -36,7 +41,7 @@ export const CvBuilder = () => {
     }
 
 
-    
+
 
     return (
         <>
@@ -70,15 +75,23 @@ export const CvBuilder = () => {
                             />
                         }
 
-                        <ObjectivesForm
-                            title="Now, let's work on your resume objective"
-                            description="This appears near the top of your resume. Impress employers with a strong opening statement that sums up your strengths and experience.
+                        {
+                            viewObjectives &&
+
+                            <ObjectivesForm
+                                title="Now, let's work on your resume objective"
+                                description="This appears near the top of your resume. Impress employers with a strong opening statement that sums up your strengths and experience.
                             Objective
                             "
-                            onClick={OnsaveObjective}
-                            SaveBttonText="Save Objective"
+                                onClick={OnsaveObjective}
+                                SaveBttonText="Save Objective"
+                                objective={objective}
+                                setObjective={setObjective}
 
-                        />
+                            />
+                        }
+
+
 
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
@@ -89,6 +102,7 @@ export const CvBuilder = () => {
                             email={email}
                             address={address}
                             phone={phone}
+                            objectives={objectives}
 
                         />
                     </UiCol>

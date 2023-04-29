@@ -66,6 +66,8 @@ export const UiTextArea = (props) => {
                 placeholder={props.placeholder}               
                 minRows={props.minRows}
                 className={props.className}
+                defaultValue={props.defaultValue}
+                onChange={props.onChange}
             />
         </>
     )

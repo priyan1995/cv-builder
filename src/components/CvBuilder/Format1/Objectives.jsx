@@ -9,9 +9,7 @@ export const Objectives = (props) => {
                 </div>
                 <div className="pd-cv-right">
                     <div>
-                        <p className="pd-cv-desc">
-                            Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces, debugging and updating existing projects, and ensuring customer satisfaction. Looking forward to demonstrating my proven abilities in optimizing web functionalities in a challenging and motivating work environment.</p>
-
+                        <p className="pd-cv-desc">{props.objectives}</p>
                     </div>
                 </div>
             </div>

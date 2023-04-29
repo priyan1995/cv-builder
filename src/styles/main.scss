@@ -169,7 +169,7 @@ div {
     transition: all 0.5s;
     &:hover{
         padding: 12px 35px;
-        margin-top: 2rem;
+        margin-top: 1rem;
         @include border-radius(50px);
         transition: all 0.5s;
         transform: translateY(-2px);
