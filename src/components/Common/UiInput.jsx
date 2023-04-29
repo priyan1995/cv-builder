@@ -16,6 +16,7 @@ export const UiTextInput = (props) => {
                 className={props.className}
                 value={props.value}
                 onChange={props.onChange}
+                defaultValue={props.defaultValue}
             />
 
         </>
@@ -44,7 +45,13 @@ export const UiDateInput = (props) => {
         <>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer components={['DatePicker']}>
-                    <DatePicker label={props.label} className={props.className} />
+                    <DatePicker
+                        label={props.label}
+                        className={props.className}
+                        onChange={props.onChange}
+                        value={props.value}
+                        defaultValue={props.defaultValue}
+                    />
                 </DemoContainer>
             </LocalizationProvider>
         </>

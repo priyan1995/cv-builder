@@ -6,6 +6,7 @@ import { UiCol } from "../components/Common/UiCol";
 import { UiCv } from "../components/CvBuilder/UiCv";
 import { UiTitle } from "../components/Common/UiTitle";
 import { UiDateInput, UiTextInput } from "../components/Common/UiInput";
+import dayjs, { Dayjs } from "dayjs";
 
 export const CvBuilder = () => {
 
@@ -15,6 +16,11 @@ export const CvBuilder = () => {
     const [email, setEmail] = useState('priyan@gmail.com');
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
     const [phone, setPhone] = useState('0741251125');
+     const [date, setDate] = useState();
+
+    // const [date, setDate] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
+
+     console.log(date);
 
     return (
         <>
@@ -36,7 +42,8 @@ export const CvBuilder = () => {
                                             label="First Name"
                                             type="text"
                                             className="w-100 pd-mui-input"
-                                            onChange={(e) => setFirstName(e.target.value)}
+                                            onChange={(e) => setFirstName(e.target.value)} 
+                                            defaultValue={firstName}                                          
                                         />
                                     </UiCol>
                                     <UiCol lg="6">
@@ -49,8 +56,9 @@ export const CvBuilder = () => {
                                             type="text"
                                             className="w-100 pd-mui-input"
                                             onChange={(e) => setLastName(e.target.value)}
+                                            defaultValue={lastName}  
                                         />
-                                    </UiCol>
+                                    </UiCol>  
 
                                     <UiCol lg="12">
                                         <UiTextInput
@@ -58,6 +66,7 @@ export const CvBuilder = () => {
                                             type="text"
                                             className="w-100 pd-mui-input"
                                             onChange={(e) => setOccupation(e.target.value)}
+                                            defaultValue={occupation}  
                                         />
                                     </UiCol>
 
@@ -67,6 +76,7 @@ export const CvBuilder = () => {
                                             type="text"
                                             className="w-100 pd-mui-input"
                                             onChange={(e) => setAddress(e.target.value)}
+                                            defaultValue={address}  
                                         />
                                     </UiCol>
                                     <UiCol lg="6">
@@ -75,6 +85,7 @@ export const CvBuilder = () => {
                                             type="text"
                                             className="w-100 pd-mui-input"
                                             onChange={(e) => setPhone(e.target.value)}
+                                            defaultValue={phone}  
                                         />
                                     </UiCol>
 
@@ -84,21 +95,15 @@ export const CvBuilder = () => {
                                             type="email"
                                             className="w-100 pd-mui-input"
                                             onChange={(e) => setEmail(e.target.value)}
+                                            defaultValue={email}  
                                         />
                                     </UiCol>
 
                                     <UiCol lg="12">
                                         <UiDateInput
                                             label="Date of Birth"
-                                            className="w-100 pd-mui-input"
-                                        />
-                                    </UiCol>
-
-                                    <UiCol lg="12">
-                                        <UiTextInput
-                                            label="Link"
-                                            type="text"
-                                            className="w-100 pd-mui-input"
+                                            className="w-100 pd-mui-input"                                         
+                                                                                    
                                         />
                                     </UiCol>
 
