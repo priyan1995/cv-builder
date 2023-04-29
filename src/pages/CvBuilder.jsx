@@ -9,6 +9,7 @@ import { UiDateInput, UiTextInput } from "../components/Common/UiInput";
 import dayjs, { Dayjs } from "dayjs";
 import { ContactInfoForm } from "../components/CvBuilder/Forms/ContactInfoForm";
 import { ObjectivesForm } from "../components/CvBuilder/Forms/ObjectivesForm";
+import { ExperienceForm } from "../components/CvBuilder/Forms/ExperienceForm";
 
 export const CvBuilder = () => {
 
@@ -90,6 +91,12 @@ export const CvBuilder = () => {
 
                             />
                         }
+
+                        <ExperienceForm
+                            title="Great! Let's fill out your work experience next"
+                            description="Great! Let's fill out your work experience next"
+                            SaveBttonText="Add Experience"
+                        />
 
 
 
