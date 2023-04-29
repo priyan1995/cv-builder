@@ -19,7 +19,7 @@ export const CvBuilder = () => {
 
     const experienceArr = ExperienceData;
 
-    const newElement = { id: '3', position: 'New Pos', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' }
+    // const newElement = { id: '3', position: 'New Pos', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' }
 
 
     // personal Info
@@ -60,8 +60,18 @@ export const CvBuilder = () => {
     }
 
 
-    const onSaveExp = () => {
+    const onSaveExp = (e) => {
         console.log("saved Experience");
+
+        
+        setPosition(e.target.value);
+        setCompanyName(e.target.value);
+        setLocation(e.target.value);
+        setPeriod(e.target.value);
+        setJobDescription(e.target.value);
+
+        const newElement = { id:'3' , position: position, companyName: compName, location: location, period: period, desc: jobDescription }
+
         setExperience(experience => [...experience, newElement]);
     }
 
@@ -128,7 +138,7 @@ export const CvBuilder = () => {
                             jobDescription={jobDescription}
                             setJobDescription={setJobDescription}
                         />
-                        
+
 
 
                     </UiCol>
