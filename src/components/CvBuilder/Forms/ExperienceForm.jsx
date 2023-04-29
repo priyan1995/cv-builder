@@ -18,6 +18,7 @@ export const ExperienceForm = (props) => {
     const setPeriod = props.setPeriod;
     const jobDescription = props.jobDescription;
     const setJobDescription = props.setJobDescription;
+    const exper = props.exper;
 
 
     return (
@@ -90,6 +91,24 @@ export const ExperienceForm = (props) => {
 
                     </UiRow>
                 </form>
+            </div>
+
+            <div className="pd-experience-list">
+                {
+                    exper.map((item) => {
+                        return (
+                            <>
+                                <div key={item.id}>
+                                    <h5>{item.position}</h5>
+                                    <h6>{item.companyName}</h6>
+                                    <p className="pd-per">{item.period}</p>
+                                    <p className="pd-loc">{item.location}</p>
+                                    <p className="pd-desc">{item.desc}</p>
+                                </div>
+                            </>
+                        )
+                    })
+                }
             </div>
 
         </>

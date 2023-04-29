@@ -153,3 +153,37 @@ label,
         }
     }
 }
+
+.pd-experience-list{
+    margin: 2rem 0 1rem;
+    div{
+
+        padding: 1.5rem;
+        background: #80808026;
+        margin: 1rem 0;
+        @include border-radius(10px);
+
+        h5{
+              @include fnt-dmsans(600, 1.2rem);
+        }
+
+        h6{
+              @include fnt-dmsans(600, 1rem);
+        }
+
+        .pd-per{
+              @include fnt-dmsans(400, 0.85rem);
+              margin-bottom: 0;
+        }
+
+        .pd-loc{
+              @include fnt-dmsans(400, 0.85rem);
+              margin-bottom: 5px;
+        }
+
+        .pd-desc{
+              @include fnt-dmsans(400, 0.85rem);
+              margin-bottom: 0;
+        }
+    }
+}

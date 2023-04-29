@@ -19,9 +19,6 @@ export const CvBuilder = () => {
 
     const experienceArr = ExperienceData;
 
-    // const newElement = { id: '3', position: 'New Pos', companyName: 'Louis Vuitton', location: 'San Fransisco, CA', period: 'Jan 2015 - Mar 2018', desc: 'experience in crafting and testing user-friendly interfaces, debugging and updating existing projects' }
-
-
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
@@ -137,6 +134,7 @@ export const CvBuilder = () => {
                             setPeriod={setPeriod}
                             jobDescription={jobDescription}
                             setJobDescription={setJobDescription}
+                            exper={experience}
                         />
 
 
