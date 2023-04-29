@@ -19,6 +19,7 @@ export const ExperienceForm = (props) => {
     const jobDescription = props.jobDescription;
     const setJobDescription = props.setJobDescription;
     const exper = props.exper;
+    const removeItem = props.removeItem;
 
 
     return (
@@ -104,6 +105,7 @@ export const ExperienceForm = (props) => {
                                     <p className="pd-per">{item.period}</p>
                                     <p className="pd-loc">{item.location}</p>
                                     <p className="pd-desc">{item.desc}</p>
+                                    <button onClick={()=>removeItem(item.id)}>Remove</button>
                                 </div>
                             </>
                         )

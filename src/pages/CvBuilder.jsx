@@ -72,6 +72,11 @@ export const CvBuilder = () => {
         setExperience(experience => [...experience, newElement]);
     }
 
+    const removeItem = (id) => {
+        console.log(id)
+        console.log("removed")
+    }
+
 
     return (
         <>
@@ -135,6 +140,7 @@ export const CvBuilder = () => {
                             jobDescription={jobDescription}
                             setJobDescription={setJobDescription}
                             exper={experience}
+                            removeItem={removeItem}
                         />
 
 
