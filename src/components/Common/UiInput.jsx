@@ -1,10 +1,11 @@
-import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Input, TextField } from "@mui/material";
+import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Input, TextField, TextareaAutosize } from "@mui/material";
 import React from "react";
 import { pink } from '@mui/material/colors';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { Textarea } from "@mui/joy";
 
 export const UiTextInput = (props) => {
     return (
@@ -54,6 +55,18 @@ export const UiDateInput = (props) => {
                     />
                 </DemoContainer>
             </LocalizationProvider>
+        </>
+    )
+}
+
+export const UiTextArea = (props) => {
+    return (
+        <>
+            <TextareaAutosize
+                placeholder={props.placeholder}               
+                minRows={props.minRows}
+                className={props.className}
+            />
         </>
     )
 }

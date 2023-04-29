@@ -8,6 +8,7 @@ import { UiTitle } from "../components/Common/UiTitle";
 import { UiDateInput, UiTextInput } from "../components/Common/UiInput";
 import dayjs, { Dayjs } from "dayjs";
 import { ContactInfoForm } from "../components/CvBuilder/Forms/ContactInfoForm";
+import { ObjectivesForm } from "../components/CvBuilder/Forms/ObjectivesForm";
 
 export const CvBuilder = () => {
 
@@ -26,9 +27,16 @@ export const CvBuilder = () => {
     const [viewPersonalInfo, setViewPersonalInfo] = useState(true);
 
     const OnsaveFormOne = () => {
-        console.log('saved');
+        console.log('saved Contact');
         setViewPersonalInfo(false);
     }
+
+    const OnsaveObjective = () => {
+        console.log('saved Objective');
+    }
+
+
+    
 
     return (
         <>
@@ -62,6 +70,15 @@ export const CvBuilder = () => {
                             />
                         }
 
+                        <ObjectivesForm
+                            title="Now, let's work on your resume objective"
+                            description="This appears near the top of your resume. Impress employers with a strong opening statement that sums up your strengths and experience.
+                            Objective
+                            "
+                            onClick={OnsaveObjective}
+                            SaveBttonText="Save Objective"
+
+                        />
 
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
