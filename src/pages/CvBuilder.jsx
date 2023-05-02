@@ -171,8 +171,8 @@ export const CvBuilder = () => {
 
     // save Other
     const onSaveOther = (e) => {
-        setOtherTitle(e.target.value);
-        setOtherDesc(e.target.value);
+        setOtherTitle(otherTitle);
+        setOtherDesc(otherDesc);
     }
 
     // remove experience item

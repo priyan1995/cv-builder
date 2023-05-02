@@ -192,3 +192,23 @@ textarea.pd-mui-input {
     padding-top: 0.6rem;
     margin-bottom: 0;
 }
+
+@media (min-width:1366px){
+    .container-fluid{
+        max-width: 1350px;
+    }
+}
+
+::-moz-scrollbar-button:decrement,
+::-moz-scrollbar-button:increment,
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment {
+  width: 0px;
+}
+
+::-moz-scrollbar-button, ::-webkit-scrollbar-button {
+    width: 0px !important;
+    display: none;
+    opacity: 0;
+  }
+  
