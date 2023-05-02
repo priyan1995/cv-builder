@@ -162,6 +162,7 @@ label,
         background: #80808026;
         margin: 1rem 0;
         @include border-radius(10px);
+        position: relative;
 
         h5{
               @include fnt-dmsans(600, 1.2rem);
@@ -185,5 +186,21 @@ label,
               @include fnt-dmsans(400, 0.85rem);
               margin-bottom: 0;
         }
+        .pd-remove-button-rounded{
+            border: none;
+            background: $lightRed;
+            @include border-radius(100%);
+            width: 30px;
+            height: 30px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include fnt-dmsans(700, 0.85rem);
+            position: absolute;
+            right: -9px;
+            top: -8px;
+        }
     }
 }
+

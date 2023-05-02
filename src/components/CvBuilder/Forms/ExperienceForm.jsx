@@ -105,7 +105,7 @@ export const ExperienceForm = (props) => {
                                     <p className="pd-per">{item.period}</p>
                                     <p className="pd-loc">{item.location}</p>
                                     <p className="pd-desc">{item.desc}</p>
-                                    <button onClick={()=>removeItem(item.id)}>Remove</button>
+                                    <button onClick={()=>removeItem(item.id)} className="pd-remove-button-rounded">X</button>
                                 </div>
                             </>
                         )
