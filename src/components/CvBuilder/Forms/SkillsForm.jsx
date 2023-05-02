@@ -40,7 +40,7 @@ export const SkillsForm = (props) => {
                         <UiCol lg="12">
                             <div className="pd-btn-group">
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
-                                {/* <UiButton className="pd-primary-btn pd-large-pad" onClick={next}>Next</UiButton> */}
+                                <UiButton className="pd-primary-btn pd-large-pad" onClick={props.next}>Next</UiButton>
                             </div>
                         </UiCol>
 

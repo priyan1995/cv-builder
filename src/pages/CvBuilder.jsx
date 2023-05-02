@@ -73,6 +73,7 @@ export const CvBuilder = () => {
     const [viewExperience, setViewExperience] = useState(false);
     const [viewEducation, setViewEducation] = useState(false);
     const [viewLang, setViewLang] = useState(false);
+    const [viewSkills, setViewSkills] = useState(false);
 
     // personal Infomation Form
     const OnsaveFormOne = () => {
@@ -102,8 +103,16 @@ export const CvBuilder = () => {
     // Langauge form next
     const nextFromLang = () => {
         setViewLang(false);
+        setViewSkills(true);
 
     }
+
+    // skills form next
+    const nextFromSkills = () => {
+        setViewSkills(false);
+    }
+
+
 
     // save Experience data
     const onSaveExp = (e) => {
@@ -151,7 +160,6 @@ export const CvBuilder = () => {
         const newSkill = { id: '13', name: skillTitle, };
         setSkills(skills => [...skills, newSkill]);
     }
-
 
 
     // remove experience item
@@ -289,21 +297,21 @@ export const CvBuilder = () => {
                             />
                         }
 
-                        <SkillsForm
-                            title="Almost finished the basics! Just add a list of skills"
-                            description="The skills you add should reflect the requirements of the job you're applying for."
-                            SaveBttonText="Add Skill"
-                            skillTitle={skillTitle}
-                            setSkillTitle={setSkillTitle}
-                            skills={skills}
-                            removeItem={removeSkill}
-                            onClick={onSaveSkill}
-                        />
+                        {
+                            viewSkills &&
 
-
-
-
-
+                            <SkillsForm
+                                title="Almost finished the basics! Just add a list of skills"
+                                description="The skills you add should reflect the requirements of the job you're applying for."
+                                SaveBttonText="Add Skill"
+                                skillTitle={skillTitle}
+                                setSkillTitle={setSkillTitle}
+                                skills={skills}
+                                removeItem={removeSkill}
+                                onClick={onSaveSkill}
+                                next={nextFromSkills}
+                            />
+                        }
 
 
                     </UiCol>
