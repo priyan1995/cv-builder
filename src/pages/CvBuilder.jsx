@@ -120,6 +120,18 @@ export const CvBuilder = () => {
     }
 
     // save language data
+    // save education data
+    const onSaveLang = (e) => {      
+        
+        setLanguage(e.target.value);
+        setSkillLevel(e.target.value);
+        setLangDesc(e.target.value);
+
+        const newLang = { id: '3', language: language, skillLevel: skillLevel,  desc: langDesc };
+
+        setLang(lang => [...lang, newLang]);
+
+    }
 
     // remove experience item
     const removeExperienceItem = (id) => {
@@ -245,6 +257,7 @@ export const CvBuilder = () => {
                             setLangDesc={setLangDesc}
                             removeItem={removeLanguage}
                             next={nextFromLang}
+                            onClick={onSaveLang}
 
                         />
 
