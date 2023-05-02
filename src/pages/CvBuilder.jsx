@@ -60,21 +60,20 @@ export const CvBuilder = () => {
     const onSaveExp = (e) => {
         console.log("saved Experience");
 
-        
+
         setPosition(e.target.value);
         setCompanyName(e.target.value);
         setLocation(e.target.value);
         setPeriod(e.target.value);
         setJobDescription(e.target.value);
 
-        const newElement = { id:'3' , position: position, companyName: compName, location: location, period: period, desc: jobDescription }
+        const newElement = { id: '3', position: position, companyName: compName, location: location, period: period, desc: jobDescription }
 
         setExperience(experience => [...experience, newElement]);
     }
 
     const removeItem = (id) => {
-        console.log(id)
-        console.log("removed")
+        setExperience(experience => experience.filter(experience => experience.id !== id));
     }
 
 
