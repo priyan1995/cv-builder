@@ -7,23 +7,26 @@ export const Education = (props) => {
         <>
             <div className="pd-cv-wrapper__inner-desc pd-flx-space-between align-items-top">
                 <UiCvSecTitle title="Education" />
-                <UiCvItem
-                    location="San Fransisco, CA"
-                    duration="Jan 2013 - Mar 2017"
-                >
-                    <h5>Web Application Development</h5>
-                    <h6>University of Colombo</h6>
-                    <p>Bachalor of Information</p>
-                </UiCvItem>
+                {
+                    props.education.map((item) => {
+                        return (
+                            <>
+                                <UiCvItem
+                                    location={item.location}
+                                    duration={item.period}
+                                    key={item.id}
+                                >
+                                    <h5>{item.degree}</h5>
+                                    <h6>{item.uni}</h6>
+                                    <p>{item.desc}</p>
+                                </UiCvItem>
 
-                <UiCvItem
-                    location="San Fransisco, CA"
-                    duration="Jan 2013 - Mar 2017"
-                >
-                    <h5>Web Application Development</h5>
-                    <h6>University of Colombo</h6>
-                    <p>Bachalor of Information</p>
-                </UiCvItem>
+                            </>
+                        )
+                    })
+                }
+
+
 
 
             </div>

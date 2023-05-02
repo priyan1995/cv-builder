@@ -12,12 +12,14 @@ import { ObjectivesForm } from "../components/CvBuilder/Forms/ObjectivesForm";
 import { ExperienceForm } from "../components/CvBuilder/Forms/ExperienceForm";
 import { Objectives } from "../mockData/Objectives";
 import { ExperienceData } from "../mockData/Experience";
+import { EducationData } from "../mockData/Education";
 
 export const CvBuilder = () => {
 
+    // get mock data
     const objs = Objectives;
-
     const experienceArr = ExperienceData;
+    const educationeArr = EducationData;
 
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
@@ -39,33 +41,37 @@ export const CvBuilder = () => {
     const [period, setPeriod] = useState('');
     const [jobDescription, setJobDescription] = useState('');
 
+    // education
+    const [education, setEducation] = useState(educationeArr);
 
-    // const [date, setDate] = React.useState<Dayjs | null>(dayjs('2022-04-17'));
-    //  console.log(date);
 
+
+    // wizard steps
     const [viewPersonalInfo, setViewPersonalInfo] = useState(true);
     const [viewObjectives, setViewObjectives] = useState(false);
     const [viewExperience, setViewExperience] = useState(false);
 
+    // personal Infomation Form
     const OnsaveFormOne = () => {
         console.log('saved Contact');
         setViewPersonalInfo(false);
         setViewObjectives(true);
     }
 
+    // objectives Form
     const OnsaveObjective = () => {
         console.log('saved Objective');
         setViewObjectives(false);
         setViewExperience(true);
     }
 
+    // experience form next
     const nextFromExp = () => {
         setViewExperience(false);
     }
 
-
+    // save Experience data
     const onSaveExp = (e) => {
-
         setPosition(e.target.value);
         setCompanyName(e.target.value);
         setLocation(e.target.value);
@@ -77,7 +83,8 @@ export const CvBuilder = () => {
         setExperience(experience => [...experience, newElement]);
     }
 
-    const removeItem = (id) => {
+    // remove experience item
+    const removeExperienceItem = (id) => {
         setExperience(experience => experience.filter(experience => experience.id !== id));
     }
 
@@ -147,7 +154,7 @@ export const CvBuilder = () => {
                                 jobDescription={jobDescription}
                                 setJobDescription={setJobDescription}
                                 exper={experience}
-                                removeItem={removeItem}
+                                removeItem={removeExperienceItem}
                                 nextStep={nextFromExp}
                                
                             />
@@ -167,6 +174,7 @@ export const CvBuilder = () => {
                             phone={phone}
                             objective={objective}
                             exper={experience}
+                            education={education}
                         />
                     </UiCol>
                 </UiRow>

@@ -33,7 +33,7 @@ export const UiCv = (props) => {
                         objective={props.objective}
                     />
                     <Experience experience={props.exper} />
-                    <Education />
+                    <Education education={props.education} />
                     <Languages />
                     <Skills />
                     <Other
