@@ -45,6 +45,7 @@ export const CvBuilder = () => {
 
     const [viewPersonalInfo, setViewPersonalInfo] = useState(true);
     const [viewObjectives, setViewObjectives] = useState(false);
+    const [viewExperience, setViewExperience] = useState(false);
 
     const OnsaveFormOne = () => {
         console.log('saved Contact');
@@ -54,12 +55,16 @@ export const CvBuilder = () => {
 
     const OnsaveObjective = () => {
         console.log('saved Objective');
+        setViewObjectives(false);
+        setViewExperience(true);
+    }
+
+    const nextFromExp = () => {
+        setViewExperience(false);
     }
 
 
     const onSaveExp = (e) => {
-        console.log("saved Experience");
-
 
         setPosition(e.target.value);
         setCompanyName(e.target.value);
@@ -123,24 +128,31 @@ export const CvBuilder = () => {
                             />
                         }
 
-                        <ExperienceForm
-                            title="Great! Let's fill out your work experience next"
-                            description="Great! Let's fill out your work experience next"
-                            SaveBttonText="Add Experience"
-                            onClick={onSaveExp}
-                            position={position}
-                            setPosition={setPosition}
-                            compName={compName}
-                            setCompanyName={setCompanyName}
-                            location={location}
-                            setLocation={setLocation}
-                            period={period}
-                            setPeriod={setPeriod}
-                            jobDescription={jobDescription}
-                            setJobDescription={setJobDescription}
-                            exper={experience}
-                            removeItem={removeItem}
-                        />
+                        {
+                            viewExperience &&
+
+                            <ExperienceForm
+                                title="Great! Let's fill out your work experience next"
+                                description="Great! Let's fill out your work experience next"
+                                SaveBttonText="Add Experience"
+                                onClick={onSaveExp}
+                                position={position}
+                                setPosition={setPosition}
+                                compName={compName}
+                                setCompanyName={setCompanyName}
+                                location={location}
+                                setLocation={setLocation}
+                                period={period}
+                                setPeriod={setPeriod}
+                                jobDescription={jobDescription}
+                                setJobDescription={setJobDescription}
+                                exper={experience}
+                                removeItem={removeItem}
+                                nextStep={nextFromExp}
+                               
+                            />
+                        }
+
 
 
 

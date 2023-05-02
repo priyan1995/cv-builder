@@ -204,3 +204,10 @@ label,
     }
 }
 
+.pd-btn-group{
+    button{
+        &:first-child{
+            margin-right: 1rem;
+        }
+    }
+}

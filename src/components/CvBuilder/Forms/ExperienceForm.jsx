@@ -20,6 +20,7 @@ export const ExperienceForm = (props) => {
     const setJobDescription = props.setJobDescription;
     const exper = props.exper;
     const removeItem = props.removeItem;
+    const next = props.nextStep;
 
 
     return (
@@ -87,7 +88,10 @@ export const ExperienceForm = (props) => {
 
 
                         <UiCol lg="12">
-                            <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
+                            <div className="pd-btn-group">
+                                <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
+                                <UiButton  className="pd-primary-btn pd-large-pad" onClick={next}>Next</UiButton>
+                            </div>
                         </UiCol>
 
                     </UiRow>
@@ -105,7 +109,7 @@ export const ExperienceForm = (props) => {
                                     <p className="pd-per">{item.period}</p>
                                     <p className="pd-loc">{item.location}</p>
                                     <p className="pd-desc">{item.desc}</p>
-                                    <button onClick={()=>removeItem(item.id)} className="pd-remove-button-rounded">X</button>
+                                    <button onClick={() => removeItem(item.id)} className="pd-remove-button-rounded">X</button>
                                 </div>
                             </>
                         )
