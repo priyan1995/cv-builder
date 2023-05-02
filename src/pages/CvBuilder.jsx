@@ -15,6 +15,7 @@ import { ExperienceData } from "../mockData/Experience";
 import { EducationData } from "../mockData/Education";
 import { EducationForm } from "../components/CvBuilder/Forms/EducationForm";
 import { LanguagesData } from "../mockData/Languages";
+import { LanguagesForm } from "../components/CvBuilder/Forms/LanguagesForm";
 
 export const CvBuilder = () => {
 
@@ -85,6 +86,11 @@ export const CvBuilder = () => {
         setViewEducation(true);
     }
 
+    // Langauge form next
+    const nextFromLang = () => {
+        console.log('next from language')
+    }
+
     // save Experience data
     const onSaveExp = (e) => {
         setPosition(e.target.value);
@@ -113,6 +119,8 @@ export const CvBuilder = () => {
         console.log(newEduElement);
     }
 
+    // save language data
+
     // remove experience item
     const removeExperienceItem = (id) => {
         setExperience(experience => experience.filter(experience => experience.id !== id));
@@ -120,6 +128,10 @@ export const CvBuilder = () => {
     // remove education item
     const removeEducationItem = (id) => {
         setEducation(education => education.filter(education => education.id !== id));
+    }
+    // remove language item
+    const removeLanguage = (id) => {
+        setLang(lang => lang.filter(lang => lang.id !== id));
     }
 
 
@@ -217,6 +229,24 @@ export const CvBuilder = () => {
                                 onClick={onSaveEduc}
                             />
                         }
+
+                        <LanguagesForm
+                            title="Speak multiple languages?"
+                            description="Add your languages and levels of ability here (only if you speak more than one language).
+                          Languages"
+                            SaveBttonText="Add Language"
+                            lang={lang}
+                            setLang={setLang}
+                            language={language}
+                            setLanguage={setLanguage}
+                            skillLevel={skillLevel}
+                            setSkillLevel={setSkillLevel}
+                            langDesc={langDesc}
+                            setLangDesc={setLangDesc}
+                            removeItem={removeLanguage}
+                            next={nextFromLang}
+
+                        />
 
 
 
