@@ -16,6 +16,7 @@ import { EducationData } from "../mockData/Education";
 import { EducationForm } from "../components/CvBuilder/Forms/EducationForm";
 import { LanguagesData } from "../mockData/Languages";
 import { LanguagesForm } from "../components/CvBuilder/Forms/LanguagesForm";
+import { SkillData } from "../mockData/Skills";
 
 export const CvBuilder = () => {
 
@@ -24,6 +25,7 @@ export const CvBuilder = () => {
     const experienceArr = ExperienceData;
     const educationeArr = EducationData;
     const languagesArr = LanguagesData;
+    const skillArr = SkillData;
 
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
@@ -58,6 +60,9 @@ export const CvBuilder = () => {
     const [language, setLanguage] = useState('');
     const [skillLevel, setSkillLevel] = useState('');
     const [langDesc, setLangDesc] = useState('');
+
+    // skills
+    const [skills, setSkills] = useState(skillArr);
 
 
     // wizard steps
@@ -288,6 +293,7 @@ export const CvBuilder = () => {
                             exper={experience}
                             education={education}
                             lang={lang}
+                            skillData={skills}
                         />
                     </UiCol>
                 </UiRow>

@@ -35,7 +35,7 @@ export const UiCv = (props) => {
                     <Experience experience={props.exper} />
                     <Education education={props.education} />
                     <Languages lang={props.lang} />
-                    <Skills />
+                    <Skills skillData={props.skillData} />
                     <Other
                         title="Other"
                         desc=" Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces."
