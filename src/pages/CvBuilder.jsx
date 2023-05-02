@@ -65,6 +65,7 @@ export const CvBuilder = () => {
     const [viewObjectives, setViewObjectives] = useState(false);
     const [viewExperience, setViewExperience] = useState(false);
     const [viewEducation, setViewEducation] = useState(false);
+    const [viewLang, setViewLang] = useState(false);
 
     // personal Infomation Form
     const OnsaveFormOne = () => {
@@ -85,10 +86,16 @@ export const CvBuilder = () => {
         setViewExperience(false);
         setViewEducation(true);
     }
+    
+    const nextFromEdu = () => {
+        setViewEducation(false);
+        setViewLang(true);
+    }
 
     // Langauge form next
     const nextFromLang = () => {
-        console.log('next from language')
+        setViewLang(false);
+       
     }
 
     // save Experience data
@@ -120,17 +127,14 @@ export const CvBuilder = () => {
     }
 
     // save language data
-    // save education data
-    const onSaveLang = (e) => {      
-        
+    const onSaveLang = (e) => {
+
         setLanguage(e.target.value);
         setSkillLevel(e.target.value);
         setLangDesc(e.target.value);
 
-        const newLang = { id: '3', language: language, skillLevel: skillLevel,  desc: langDesc };
-
+        const newLang = { id: '3', language: language, skillLevel: skillLevel, desc: langDesc };
         setLang(lang => [...lang, newLang]);
-
     }
 
     // remove experience item
@@ -235,31 +239,35 @@ export const CvBuilder = () => {
                                 setPeriodEdu={setPeriodEdu}
                                 eduDesc={eduDesc}
                                 setEduDesc={setEduDesc}
-                                next={nextFromExp}
+                                next={nextFromEdu}
                                 eduData={education}
                                 removeItem={removeEducationItem}
                                 onClick={onSaveEduc}
                             />
                         }
 
-                        <LanguagesForm
-                            title="Speak multiple languages?"
-                            description="Add your languages and levels of ability here (only if you speak more than one language).
-                          Languages"
-                            SaveBttonText="Add Language"
-                            lang={lang}
-                            setLang={setLang}
-                            language={language}
-                            setLanguage={setLanguage}
-                            skillLevel={skillLevel}
-                            setSkillLevel={setSkillLevel}
-                            langDesc={langDesc}
-                            setLangDesc={setLangDesc}
-                            removeItem={removeLanguage}
-                            next={nextFromLang}
-                            onClick={onSaveLang}
+                        {
+                            viewLang &&
 
-                        />
+                            <LanguagesForm
+                                title="Speak multiple languages?"
+                                description="Add your languages and levels of ability here (only if you speak more than one language). Languages"
+                                SaveBttonText="Add Language"
+                                lang={lang}
+                                setLang={setLang}
+                                language={language}
+                                setLanguage={setLanguage}
+                                skillLevel={skillLevel}
+                                setSkillLevel={setSkillLevel}
+                                langDesc={langDesc}
+                                setLangDesc={setLangDesc}
+                                removeItem={removeLanguage}
+                                next={nextFromLang}
+                                onClick={onSaveLang}
+
+                            />
+                        }
+
 
 
 

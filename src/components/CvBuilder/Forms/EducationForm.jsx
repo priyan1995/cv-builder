@@ -22,7 +22,7 @@ export const EducationForm = (props) => {
 
     const edu = props.eduData;
     const removeItem = props.removeItem;
-    const next = props.nextStep;
+    const next = props.next;
 
 
     return (
