@@ -1,6 +1,4 @@
 import React from "react";
-import { UiRow } from "../Common/UiRow";
-import { UiCol } from "../Common/UiCol";
 import profileImg from '../../styles/img/profile.jpg';
 import { Objectives } from "./Format1/Objectives";
 import { Experience } from "./Format1/Experience";
@@ -37,8 +35,8 @@ export const UiCv = (props) => {
                     <Languages lang={props.lang} />
                     <Skills skillData={props.skillData} />
                     <Other
-                        title="Other"
-                        desc=" Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces."
+                        title={props.otherFTitle}
+                        desc={props.otherFDesc}
                     />
                 </div>
             </section>

@@ -5,12 +5,12 @@ import { UiDateInput, UiTextArea, UiTextInput } from "../../Common/UiInput";
 import { UiTitle } from "../../Common/UiTitle";
 import { UiButton } from "../../Common/UiButtons";
 
-export const SkillsForm = (props) => {
+export const OtherForm = (props) => {
 
-    const skillTitle = props.skillTitle;
-    const setSkillTitle = props.setSkillTitle;
-    const skills = props.skills;
-    const removeItem = props.removeItem;
+    const otherTitle = props.otherTitle;
+    const setOtherTitle = props.setOtherTitle;
+    const otherDesc = props.otherDesc;
+    const setOtherDesc = props.setOtherDesc;
 
     return (
         <>
@@ -22,14 +22,24 @@ export const SkillsForm = (props) => {
 
                 <form>
                     <UiRow>
-                        <h4 className="pd-form-inp-title">Skills</h4>
+                        <h4 className="pd-form-inp-title">Others</h4>
                         <UiCol lg="12">
                             <UiTextInput
-                                label="Skill"
+                                label="Title"
                                 type="text"
                                 className="w-100 pd-mui-input"
-                                onChange={(e) => setSkillTitle(e.target.value)}
-                                defaultValue={skillTitle}
+                                onChange={(e) => setOtherTitle(e.target.value)}
+                                defaultValue={otherTitle}
+                            />
+                        </UiCol>
+
+                        <UiCol lg="12">
+                            <UiTextArea
+                                placeholder="Description"
+                                minRows="5"
+                                className="w-100 pd-mui-input"
+                                onChange={(e) => setOtherDesc(e.target.value)}
+                                defaultValue={otherDesc}
                             />
                         </UiCol>
 
@@ -39,7 +49,7 @@ export const SkillsForm = (props) => {
                         <UiCol lg="12">
                             <div className="pd-btn-group">
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
-                                <UiButton className="pd-primary-btn pd-large-pad" onClick={props.next}>Next</UiButton>
+                                {/* <UiButton className="pd-primary-btn pd-large-pad" onClick={props.next}>Next</UiButton> */}
                             </div>
                         </UiCol>
 
@@ -47,21 +57,7 @@ export const SkillsForm = (props) => {
                 </form>
             </div>
 
-            <div className="pd-experience-list pd-skills-list-fm">
-                {
-                    skills.map((item) => {
-                        return (
-                            <>
-                                <div key={item.id}>
-                                    <h5>{item.name}</h5>
-                                    <button onClick={() => removeItem(item.id)} className="pd-remove-button-rounded">X</button>
-                                </div>
-                            </>
-                        )
-                    })
-                }
-            </div>
-
+          
         </>
     )
 }

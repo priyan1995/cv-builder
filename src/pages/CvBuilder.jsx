@@ -18,6 +18,8 @@ import { LanguagesData } from "../mockData/Languages";
 import { LanguagesForm } from "../components/CvBuilder/Forms/LanguagesForm";
 import { SkillData } from "../mockData/Skills";
 import { SkillsForm } from "../components/CvBuilder/Forms/SkillsForm";
+import { OtherData } from "../mockData/Other";
+import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
 
 export const CvBuilder = () => {
 
@@ -27,6 +29,8 @@ export const CvBuilder = () => {
     const educationeArr = EducationData;
     const languagesArr = LanguagesData;
     const skillArr = SkillData;
+    const otherFTitle = "Other";
+    const otherFDesc = "Meticulous web developer with a proven track record in creating remarkable and responsive solutions in the least possible time. Have 7+ years of experience in crafting and testing user-friendly interfaces.";
 
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
@@ -65,6 +69,10 @@ export const CvBuilder = () => {
     // skills
     const [skills, setSkills] = useState(skillArr);
     const [skillTitle, setSkillTitle] = useState('');
+
+    // other
+    const [otherTitle, setOtherTitle] = useState(otherFTitle);
+    const [otherDesc, setOtherDesc] = useState(otherFDesc);
 
 
     // wizard steps
@@ -113,7 +121,6 @@ export const CvBuilder = () => {
     }
 
 
-
     // save Experience data
     const onSaveExp = (e) => {
         setPosition(e.target.value);
@@ -159,6 +166,18 @@ export const CvBuilder = () => {
 
         const newSkill = { id: '13', name: skillTitle, };
         setSkills(skills => [...skills, newSkill]);
+    }
+
+    // save Other
+    const onSaveOther = (e) => {
+
+        // setOtherTitle(e.target.value);
+        // setOtherDesc(e.target.value);
+        console.log('saved');
+        setOtherTitle('asdfasdgfasgf');
+
+        // const newOther = { id: '1', title: otherTitle, desc: otherDesc };
+        // setOthData(othData => [...othData, newOther]);
     }
 
 
@@ -314,6 +333,18 @@ export const CvBuilder = () => {
                         }
 
 
+                        <OtherForm
+                            title="Here’s where you can create your own custom section!"
+                            description="Call this section whatever you want and make it your own. It can be something specific such as 'IT Skills' or 'Driving Experience', or it could be something creative to help you stand out."
+                            otherTitle={otherTitle}
+                            setOtherTitle={setOtherTitle}
+                            otherDesc={otherDesc}
+                            setOtherDesc={setOtherDesc}
+                            SaveBttonText="Save"
+                            onClick={onSaveOther}
+
+                        />
+
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
                         <UiCv
@@ -328,6 +359,8 @@ export const CvBuilder = () => {
                             education={education}
                             lang={lang}
                             skillData={skills}
+                            otherFTitle={otherTitle}
+                            otherFDesc={otherDesc}
                         />
                     </UiCol>
                 </UiRow>
