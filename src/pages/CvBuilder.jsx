@@ -13,6 +13,7 @@ import { ExperienceForm } from "../components/CvBuilder/Forms/ExperienceForm";
 import { Objectives } from "../mockData/Objectives";
 import { ExperienceData } from "../mockData/Experience";
 import { EducationData } from "../mockData/Education";
+import { EducationForm } from "../components/CvBuilder/Forms/EducationForm";
 
 export const CvBuilder = () => {
 
@@ -43,7 +44,11 @@ export const CvBuilder = () => {
 
     // education
     const [education, setEducation] = useState(educationeArr);
-
+    const [degree, setDegree] = useState('');
+    const [university, setUniversity] = useState('');
+    const [locationEdu, setLocationEdu] = useState('');
+    const [periodEdu, setPeriodEdu] = useState('');
+    const [eduDesc, setEduDesc] = useState('');
 
 
     // wizard steps
@@ -83,9 +88,28 @@ export const CvBuilder = () => {
         setExperience(experience => [...experience, newElement]);
     }
 
+    // save education data
+    const onSaveEduc = (e) => {
+        setDegree(e.target.value);
+        setUniversity(e.target.value);
+        setLocationEdu(e.target.value)
+        setPeriodEdu(e.target.value);
+        setEduDesc(e.target.value);
+
+        const newEduElement = { id: '3', degree: degree, uni: university, location: locationEdu, period: periodEdu, desc: eduDesc }
+
+        setEducation(education => [...education, newEduElement]);
+        
+        console.log(newEduElement);
+    }
+
     // remove experience item
     const removeExperienceItem = (id) => {
         setExperience(experience => experience.filter(experience => experience.id !== id));
+    }
+    // remove education item
+    const removeEducationItem = (id) => {
+        setEducation(education => education.filter(education => education.id !== id));
     }
 
 
@@ -156,9 +180,31 @@ export const CvBuilder = () => {
                                 exper={experience}
                                 removeItem={removeExperienceItem}
                                 nextStep={nextFromExp}
-                               
+
                             />
                         }
+
+
+                        <EducationForm
+                            title="Awesome! Now, what qualifications do you have?"
+                            description="Start with your most recent period of education and work backwards. If you have many, just add the most recent and relevant ones."
+                            SaveBttonText="Add Education"
+                            degree={degree}
+                            setDegree={setDegree}
+                            university={university}
+                            setUniversity={setUniversity}
+                            locationEdu={locationEdu}
+                            setLocationEdu={setLocationEdu}
+                            periodEdu={periodEdu}
+                            setPeriodEdu={setPeriodEdu}
+                            eduDesc={eduDesc}
+                            setEduDesc={setEduDesc}
+                            next={nextFromExp}
+                            eduData={education}
+                            removeItem={removeEducationItem}
+                            onClick={onSaveEduc}
+
+                        />
 
 
 
