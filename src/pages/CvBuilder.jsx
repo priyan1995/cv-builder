@@ -82,6 +82,7 @@ export const CvBuilder = () => {
     const [viewEducation, setViewEducation] = useState(false);
     const [viewLang, setViewLang] = useState(false);
     const [viewSkills, setViewSkills] = useState(false);
+    const [viewOther, setViewOther] = useState(false);
 
     // personal Infomation Form
     const OnsaveFormOne = () => {
@@ -112,12 +113,12 @@ export const CvBuilder = () => {
     const nextFromLang = () => {
         setViewLang(false);
         setViewSkills(true);
-
     }
 
     // skills form next
     const nextFromSkills = () => {
         setViewSkills(false);
+        setViewOther(true);
     }
 
 
@@ -170,16 +171,9 @@ export const CvBuilder = () => {
 
     // save Other
     const onSaveOther = (e) => {
-
-        // setOtherTitle(e.target.value);
-        // setOtherDesc(e.target.value);
-        console.log('saved');
-        setOtherTitle('asdfasdgfasgf');
-
-        // const newOther = { id: '1', title: otherTitle, desc: otherDesc };
-        // setOthData(othData => [...othData, newOther]);
+        setOtherTitle(e.target.value);
+        setOtherDesc(e.target.value);
     }
-
 
     // remove experience item
     const removeExperienceItem = (id) => {
@@ -333,17 +327,22 @@ export const CvBuilder = () => {
                         }
 
 
-                        <OtherForm
-                            title="Here’s where you can create your own custom section!"
-                            description="Call this section whatever you want and make it your own. It can be something specific such as 'IT Skills' or 'Driving Experience', or it could be something creative to help you stand out."
-                            otherTitle={otherTitle}
-                            setOtherTitle={setOtherTitle}
-                            otherDesc={otherDesc}
-                            setOtherDesc={setOtherDesc}
-                            SaveBttonText="Save"
-                            onClick={onSaveOther}
+                        {
+                            viewOther &&
 
-                        />
+                            <OtherForm
+                                title="Here’s where you can create your own custom section!"
+                                description="Call this section whatever you want and make it your own. It can be something specific such as 'IT Skills' or 'Driving Experience', or it could be something creative to help you stand out."
+                                otherTitle={otherTitle}
+                                setOtherTitle={setOtherTitle}
+                                otherDesc={otherDesc}
+                                setOtherDesc={setOtherDesc}
+                                SaveBttonText="Save"
+                                onClick={onSaveOther}
+
+                            />
+                        }
+
 
                     </UiCol>
                     <UiCol lg="6" className="pd-padd  pd-cv-right-6">
