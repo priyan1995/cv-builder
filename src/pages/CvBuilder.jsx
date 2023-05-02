@@ -17,6 +17,7 @@ import { EducationForm } from "../components/CvBuilder/Forms/EducationForm";
 import { LanguagesData } from "../mockData/Languages";
 import { LanguagesForm } from "../components/CvBuilder/Forms/LanguagesForm";
 import { SkillData } from "../mockData/Skills";
+import { SkillsForm } from "../components/CvBuilder/Forms/SkillsForm";
 
 export const CvBuilder = () => {
 
@@ -63,6 +64,7 @@ export const CvBuilder = () => {
 
     // skills
     const [skills, setSkills] = useState(skillArr);
+    const [skillTitle, setSkillTitle] = useState('');
 
 
     // wizard steps
@@ -91,7 +93,7 @@ export const CvBuilder = () => {
         setViewExperience(false);
         setViewEducation(true);
     }
-    
+
     const nextFromEdu = () => {
         setViewEducation(false);
         setViewLang(true);
@@ -100,7 +102,7 @@ export const CvBuilder = () => {
     // Langauge form next
     const nextFromLang = () => {
         setViewLang(false);
-       
+
     }
 
     // save Experience data
@@ -142,6 +144,16 @@ export const CvBuilder = () => {
         setLang(lang => [...lang, newLang]);
     }
 
+    // save skill
+    const onSaveSkill = (e) => {
+        setSkillTitle(e.target.value);
+
+        const newSkill = { id: '13', name: skillTitle, };
+        setSkills(skills => [...skills, newSkill]);
+    }
+
+
+
     // remove experience item
     const removeExperienceItem = (id) => {
         setExperience(experience => experience.filter(experience => experience.id !== id));
@@ -153,6 +165,10 @@ export const CvBuilder = () => {
     // remove language item
     const removeLanguage = (id) => {
         setLang(lang => lang.filter(lang => lang.id !== id));
+    }
+    // remove Skill
+    const removeSkill = (id) => {
+        setSkills(skills => skills.filter(skills => skills.id !== id));
     }
 
 
@@ -273,6 +289,16 @@ export const CvBuilder = () => {
                             />
                         }
 
+                        <SkillsForm
+                            title="Almost finished the basics! Just add a list of skills"
+                            description="The skills you add should reflect the requirements of the job you're applying for."
+                            SaveBttonText="Add Skill"
+                            skillTitle={skillTitle}
+                            setSkillTitle={setSkillTitle}
+                            skills={skills}
+                            removeItem={removeSkill}
+                            onClick={onSaveSkill}
+                        />
 
 
 

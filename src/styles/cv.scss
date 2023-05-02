@@ -124,11 +124,13 @@
                
                 &__item{
                     display: flex;
+                    flex-wrap: wrap;
+                    margin-top: -1.65rem;
                     div{
                         @include fnt-dmsans(400, 0.7rem);
                         color: $paraColor;
                         background: $lightExGray;
-                        margin: 0 5px;
+                        margin: 5px;
                         border-radius: 5px;
                         padding: 4px 10px;
                     }

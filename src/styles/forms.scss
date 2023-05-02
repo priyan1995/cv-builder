@@ -204,6 +204,30 @@ label,
     }
 }
 
+.pd-skills-list-fm{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        padding: 0.5rem;
+        background: #80808026;
+        margin: 0.5rem;
+        @include border-radius(10px);
+        position: relative;
+
+        h5{
+              @include fnt-dmsans(500, 0.875rem);
+              margin-bottom: 0;
+        }
+        .pd-remove-button-rounded{
+            width: 15px;
+            height: 15px;
+            @include fnt-dmsans(700, 0.6rem);
+            right: -5px;
+            top: -7px;
+        }
+    }
+}
+
 .pd-btn-group{
     button{
         &:first-child{
