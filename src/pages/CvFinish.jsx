@@ -20,6 +20,7 @@ import { SkillData } from "../mockData/Skills";
 import { SkillsForm } from "../components/CvBuilder/Forms/SkillsForm";
 import { OtherData } from "../mockData/Other";
 import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
+import { UiButton } from "../components/Common/UiButtons";
 
 export const CvFinish = () => {
 
@@ -197,7 +198,7 @@ export const CvFinish = () => {
         <>
             <WebHeader />
             <UiContainer fluid={true} >
-                <UiRow className="pd-m-0 pd-cv-finish">                  
+                <UiRow className="pd-m-0 pd-cv-finish">
                     <UiCol lg="12" className="pd-padd  pd-cv-right-6">
                         <UiCv
                             firstName={firstName}
@@ -214,6 +215,9 @@ export const CvFinish = () => {
                             otherFTitle={otherTitle}
                             otherFDesc={otherDesc}
                         />
+                    </UiCol>
+                    <UiCol lg="12 pd-download">
+                        <UiButton className="pd-primary-btn pd-large-pad " > Download</UiButton>
                     </UiCol>
                 </UiRow>
             </UiContainer>
