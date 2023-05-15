@@ -4,6 +4,7 @@ import { UiCol } from "../../Common/UiCol";
 import { UiDateInput, UiTextArea, UiTextInput } from "../../Common/UiInput";
 import { UiTitle } from "../../Common/UiTitle";
 import { UiButton } from "../../Common/UiButtons";
+import { Link } from "react-router-dom";
 
 export const OtherForm = (props) => {
 
@@ -49,7 +50,7 @@ export const OtherForm = (props) => {
                         <UiCol lg="12">
                             <div className="pd-btn-group">
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
-                                {/* <UiButton className="pd-primary-btn pd-large-pad" onClick={props.next}>Next</UiButton> */}
+                                <UiButton className="pd-primary-btn pd-large-pad pd-link-btn" > <Link to={props.next}>Finish</Link></UiButton>
                             </div>
                         </UiCol>
 

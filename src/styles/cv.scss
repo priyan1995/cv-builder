@@ -164,6 +164,17 @@
             margin-bottom: 1rem;
             margin-top: 1.5rem;
         }
+        .pd-btn-group{
+            .pd-link-btn{
+                padding: 0;
+                a{
+                    color: $white !important;
+                    text-decoration: none;
+                    padding: 12px 35px;
+                    display: inline-block;
+                }
+            }           
+        }
     }
     .pd-primary-btn{
         font-size: 0.8rem;
@@ -175,4 +186,9 @@
     max-height: 100vh;
     overflow: auto;
     padding-bottom: 10%;
+}
+
+.pd-cv-finish{
+    max-width: 800px;
+    margin: auto;
 }

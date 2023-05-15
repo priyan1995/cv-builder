@@ -21,7 +21,7 @@ import { SkillsForm } from "../components/CvBuilder/Forms/SkillsForm";
 import { OtherData } from "../mockData/Other";
 import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
 
-export const CvBuilder = () => {
+export const CvFinish = () => {
 
     // get mock data
     const objs = Objectives;
@@ -197,156 +197,8 @@ export const CvBuilder = () => {
         <>
             <WebHeader />
             <UiContainer fluid={true} >
-                <UiRow className="pd-m-0">
-                    <UiCol lg="6" className="pd-padd pd-cv-left-6">
-
-                        {
-                            viewPersonalInfo &&
-                            <ContactInfoForm
-                                title="Tell us a little about yourself"
-                                description="Let us know who you are, how employers can get in touch with you, and what your profession is."
-                                firstName={firstName}
-                                setFirstName={setFirstName}
-                                lastName={lastName}
-                                setLastName={setLastName}
-                                occupation={occupation}
-                                setOccupation={setOccupation}
-                                email={email}
-                                setEmail={setEmail}
-                                address={address}
-                                setAddress={setAddress}
-                                phone={phone}
-                                setPhone={setPhone}
-                                date={date}
-                                setDate={setDate}
-                                onClick={OnsaveFormOne}
-                                SaveBttonText="Save Contact Detail"
-                            />
-                        }
-
-                        {
-                            viewObjectives &&
-
-                            <ObjectivesForm
-                                title="Now, let's work on your resume objective"
-                                description="This appears near the top of your resume. Impress employers with a strong opening statement that sums up your strengths and experience.
-                            Objective"
-                                onClick={OnsaveObjective}
-                                SaveBttonText="Save Objective"
-                                objective={objective}
-                                setObjective={setObjective}
-
-                            />
-                        }
-
-                        {
-                            viewExperience &&
-
-                            <ExperienceForm
-                                title="Great! Let's fill out your work experience next"
-                                description="Great! Let's fill out your work experience next"
-                                SaveBttonText="Add Experience"
-                                onClick={onSaveExp}
-                                position={position}
-                                setPosition={setPosition}
-                                compName={compName}
-                                setCompanyName={setCompanyName}
-                                location={location}
-                                setLocation={setLocation}
-                                period={period}
-                                setPeriod={setPeriod}
-                                jobDescription={jobDescription}
-                                setJobDescription={setJobDescription}
-                                exper={experience}
-                                removeItem={removeExperienceItem}
-                                nextStep={nextFromExp}
-
-                            />
-                        }
-
-                        {
-                            viewEducation &&
-
-                            <EducationForm
-                                title="Awesome! Now, what qualifications do you have?"
-                                description="Start with your most recent period of education and work backwards. If you have many, just add the most recent and relevant ones."
-                                SaveBttonText="Add Education"
-                                degree={degree}
-                                setDegree={setDegree}
-                                university={university}
-                                setUniversity={setUniversity}
-                                locationEdu={locationEdu}
-                                setLocationEdu={setLocationEdu}
-                                periodEdu={periodEdu}
-                                setPeriodEdu={setPeriodEdu}
-                                eduDesc={eduDesc}
-                                setEduDesc={setEduDesc}
-                                next={nextFromEdu}
-                                eduData={education}
-                                removeItem={removeEducationItem}
-                                onClick={onSaveEduc}
-                            />
-                        }
-
-                        {
-                            viewLang &&
-
-                            <LanguagesForm
-                                title="Speak multiple languages?"
-                                description="Add your languages and levels of ability here (only if you speak more than one language). Languages"
-                                SaveBttonText="Add Language"
-                                lang={lang}
-                                setLang={setLang}
-                                language={language}
-                                setLanguage={setLanguage}
-                                skillLevel={skillLevel}
-                                setSkillLevel={setSkillLevel}
-                                langDesc={langDesc}
-                                setLangDesc={setLangDesc}
-                                removeItem={removeLanguage}
-                                next={nextFromLang}
-                                onClick={onSaveLang}
-
-                            />
-                        }
-
-                        {
-                            viewSkills &&
-
-                            <SkillsForm
-                                title="Almost finished the basics! Just add a list of skills"
-                                description="The skills you add should reflect the requirements of the job you're applying for."
-                                SaveBttonText="Add Skill"
-                                skillTitle={skillTitle}
-                                setSkillTitle={setSkillTitle}
-                                skills={skills}
-                                removeItem={removeSkill}
-                                onClick={onSaveSkill}
-                                next={nextFromSkills}
-                            />
-                        }
-
-
-                        {
-                            viewOther &&
-
-                            <OtherForm
-                                title="Here’s where you can create your own custom section!"
-                                description="Call this section whatever you want and make it your own. It can be something specific such as 'IT Skills' or 'Driving Experience', or it could be something creative to help you stand out."
-                                otherTitle={otherTitle}
-                                setOtherTitle={setOtherTitle}
-                                otherDesc={otherDesc}
-                                setOtherDesc={setOtherDesc}
-                                SaveBttonText="Save"
-                                onClick={onSaveOther}
-                                next="/cv-finish"
-
-                            />
-                        }
-
-
-                    </UiCol>
-                    <UiCol lg="6" className="pd-padd  pd-cv-right-6">
+                <UiRow className="pd-m-0 pd-cv-finish">                  
+                    <UiCol lg="12" className="pd-padd  pd-cv-right-6">
                         <UiCv
                             firstName={firstName}
                             lastName={lastName}
