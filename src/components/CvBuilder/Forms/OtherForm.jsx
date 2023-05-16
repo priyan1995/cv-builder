@@ -22,7 +22,7 @@ export const OtherForm = (props) => {
 
 
                 <form>
-                    <UiRow>
+                    <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Others</h4>
                         <UiCol lg="12">
                             <UiTextInput
@@ -44,21 +44,19 @@ export const OtherForm = (props) => {
                             />
                         </UiCol>
 
-
-
-
+                    </UiRow>
+                    <UiRow>
                         <UiCol lg="12">
                             <div className="pd-btn-group">
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                                 <UiButton className="pd-primary-btn pd-large-pad pd-link-btn" > <Link to={props.next}>Finish</Link></UiButton>
                             </div>
                         </UiCol>
-
                     </UiRow>
                 </form>
             </div>
 
-          
+
         </>
     )
 }

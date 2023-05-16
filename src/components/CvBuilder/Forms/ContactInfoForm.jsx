@@ -31,7 +31,7 @@ export const ContactInfoForm = (props) => {
 
 
                 <form>
-                    <UiRow>
+                    <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Contact Information</h4>
                         <UiCol lg="6">
                             <UiTextInput
@@ -103,10 +103,12 @@ export const ContactInfoForm = (props) => {
                             />
                         </UiCol>
 
+                    </UiRow>
+
+                    <UiRow>
                         <UiCol lg="12">
                             <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                         </UiCol>
-
                     </UiRow>
                 </form>
             </div>

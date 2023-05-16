@@ -34,7 +34,7 @@ export const EducationForm = (props) => {
 
 
                 <form>
-                    <UiRow>
+                    <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Education</h4>
                         <UiCol lg="12">
                             <UiTextInput
@@ -55,7 +55,7 @@ export const EducationForm = (props) => {
                                 onChange={(e) => setUniversity(e.target.value)}
                                 defaultValue={university}
                             />
-                        </UiCol>                        
+                        </UiCol>
 
                         <UiCol lg="12">
                             <UiTextInput
@@ -65,7 +65,7 @@ export const EducationForm = (props) => {
                                 onChange={(e) => setLocationEdu(e.target.value)}
                                 defaultValue={locationEdu}
                             />
-                        </UiCol>                        
+                        </UiCol>
 
                         <UiCol lg="12">
                             <UiTextInput
@@ -75,7 +75,7 @@ export const EducationForm = (props) => {
                                 onChange={(e) => setPeriodEdu(e.target.value)}
                                 defaultValue={periodEdu}
                             />
-                        </UiCol>                        
+                        </UiCol>
 
                         <UiCol lg="12">
                             <UiTextArea
@@ -87,14 +87,14 @@ export const EducationForm = (props) => {
                             />
                         </UiCol>
 
-
+                    </UiRow>
+                    <UiRow>
                         <UiCol lg="12">
                             <div className="pd-btn-group">
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={next}>Next</UiButton>
                             </div>
                         </UiCol>
-
                     </UiRow>
                 </form>
             </div>

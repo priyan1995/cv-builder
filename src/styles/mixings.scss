@@ -37,6 +37,7 @@ $fnt-poppins-regular: 'Poppins', sans-serif;
 
 $breakpoint-lg: 992px;
 $breakpoint-md: 768px;
+$breakpoint-laptop: 1420px;
 
 @mixin desktop{
     @media (min-width: $breakpoint-lg) {
@@ -46,6 +47,12 @@ $breakpoint-md: 768px;
 
 @mixin tablet{
     @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (max-width: $breakpoint-laptop){
         @content;
     }
 }

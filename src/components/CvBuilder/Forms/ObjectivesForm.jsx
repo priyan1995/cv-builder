@@ -19,7 +19,7 @@ export const ObjectivesForm = (props) => {
 
 
                 <form>
-                    <UiRow>
+                    <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Objective</h4>
 
 
@@ -28,15 +28,16 @@ export const ObjectivesForm = (props) => {
                                 placeholder="Type Objective Here"
                                 minRows="5"
                                 className="w-100 pd-mui-input"
-                                onChange={(e)=>setObjective(e.target.value)}
+                                onChange={(e) => setObjective(e.target.value)}
                                 defaultValue={props.objective}
-                                />
+                            />
                         </UiCol>
 
+                    </UiRow>
+                    <UiRow>
                         <UiCol lg="12">
                             <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                         </UiCol>
-
                     </UiRow>
                 </form>
             </div>

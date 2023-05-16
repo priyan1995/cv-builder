@@ -236,3 +236,12 @@ label,
         }
     }
 }
+
+.pd-fh-form{
+    max-height: 100vh;
+    overflow: auto;
+    @include laptop{
+        max-height: 50vh;
+    }
+}
+

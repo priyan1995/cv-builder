@@ -176,6 +176,9 @@
     max-height: 100vh;
     overflow: auto;
     padding-bottom: 10%;
+    @include laptop{
+        max-height: 85vh;
+    }
 }
 
 .pd-cv-finish{

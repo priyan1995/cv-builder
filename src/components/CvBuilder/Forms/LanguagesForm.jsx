@@ -29,7 +29,7 @@ export const LanguagesForm = (props) => {
 
 
                 <form>
-                    <UiRow>
+                    <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Languages</h4>
                         <UiCol lg="12">
                             <UiTextInput
@@ -62,15 +62,15 @@ export const LanguagesForm = (props) => {
                             />
                         </UiCol>
 
+                    </UiRow>
 
-
+                    <UiRow>
                         <UiCol lg="12">
                             <div className="pd-btn-group">
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.next}>Next</UiButton>
                             </div>
                         </UiCol>
-
                     </UiRow>
                 </form>
             </div>
