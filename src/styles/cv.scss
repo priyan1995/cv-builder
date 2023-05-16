@@ -164,17 +164,7 @@
             margin-bottom: 1rem;
             margin-top: 1.5rem;
         }
-        .pd-btn-group{
-            .pd-link-btn{
-                padding: 0;
-                a{
-                    color: $white !important;
-                    text-decoration: none;
-                    padding: 12px 35px;
-                    display: inline-block;
-                }
-            }           
-        }
+       
     }
     .pd-primary-btn{
         font-size: 0.8rem;
@@ -201,4 +191,16 @@
     text-align: center;
     margin: 0 0 3rem 0;
     margin-bottom: 2rem;
+}
+
+.pd-btn-group{
+    .pd-link-btn{
+        padding: 0;
+        a{
+            color: $white !important;
+            text-decoration: none;
+            padding: 12px 35px;
+            display: inline-block;
+        }
+    }           
 }

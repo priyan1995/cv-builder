@@ -22,6 +22,7 @@ import { OtherData } from "../mockData/Other";
 import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
 import { UiButton } from "../components/Common/UiButtons";
 import { useReactToPrint } from "react-to-print";
+import { Link } from "react-router-dom";
 
 export const CvFinish = () => {
 
@@ -103,8 +104,9 @@ export const CvFinish = () => {
             </div>
             <UiContainer>
                 <UiRow>
-                    <UiCol lg="12 pd-download text-center">
+                    <UiCol lg="12 pd-download text-center pd-btn-group">
                         <UiButton className="pd-primary-btn pd-large-pad " onClick={handlePrint}> Download</UiButton>
+                        <UiButton className="pd-primary-btn pd-large-pad pd-link-btn" > <Link to="/cv">Edit CV</Link></UiButton>
                     </UiCol>
                 </UiRow>
             </UiContainer>
