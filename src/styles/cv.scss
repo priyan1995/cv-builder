@@ -191,8 +191,14 @@
 .pd-cv-finish{
     max-width: 800px;
     margin: auto;
-    .pd-download{
-        text-align: center;
-        margin: 0 0 3rem 0;
+   
+    .pd-cv-right-6{
+        max-height: unset;
     }
+}
+
+.pd-download{
+    text-align: center;
+    margin: 0 0 3rem 0;
+    margin-bottom: 2rem;
 }
