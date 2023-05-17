@@ -20,7 +20,8 @@ import { SkillData } from "../mockData/Skills";
 import { SkillsForm } from "../components/CvBuilder/Forms/SkillsForm";
 import { OtherData } from "../mockData/Other";
 import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
-import profileImg from '../styles/img/profile.jpg';
+import { ProfileImage } from "../mockData/ProfileImage";
+// import profileImg from '../styles/img/profile.jpg';
 
 export const CvBuilder = () => {
 
@@ -36,7 +37,7 @@ export const CvBuilder = () => {
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
-    const [profileImage, setProfileImage] = useState(profileImg);
+    const [profileImage, setProfileImage] = useState(ProfileImage);
     const [occupation, setOccupation] = useState('Web Developer');
     const [email, setEmail] = useState('priyan@gmail.com');
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');

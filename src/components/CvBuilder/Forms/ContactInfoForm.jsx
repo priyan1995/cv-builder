@@ -24,6 +24,16 @@ export const ContactInfoForm = (props) => {
     const date = props.date;
     const setDate = props.setDate;
 
+    const handleChange = (e) => {
+        let files = e.target.files;
+       
+        let reader = new FileReader();
+        reader.readAsDataURL(files[0]);
+        reader.onload = (e) => {
+            setProfileImage(e.target.result)
+        };
+      };
+
     return (
         <>
             <div className="pd-cv-inp-form-wrapper">
@@ -37,15 +47,16 @@ export const ContactInfoForm = (props) => {
                         <h4 className="pd-form-inp-title">Contact Information</h4>
 
                         <UiRow className="pd-img-inp-wrapper">
-                            <UiCol lg="8">
+                            <UiCol lg="9">
                                 <UiFileInput
                                     className="pd-img-input"
                                     defaultValue={profileImage}
+                                    onChange={handleChange}
                                 />
                             </UiCol>
 
 
-                            <UiCol lg="4">
+                            <UiCol lg="3" className="text-right">
                                 <img src={profileImage} className="pd-img-inp-wrapper__pd-prof-img-upd-lbl-ds" />
                             </UiCol>
                         </UiRow>
