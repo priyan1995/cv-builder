@@ -23,6 +23,7 @@ import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
 import { UiButton } from "../components/Common/UiButtons";
 import { useReactToPrint } from "react-to-print";
 import { Link } from "react-router-dom";
+import { ProfileImage } from "../mockData/ProfileImage";
 
 export const CvFinish = () => {
 
@@ -38,6 +39,7 @@ export const CvFinish = () => {
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
+    const [profileImage, setProfileImage] = useState(ProfileImage);
     const [occupation, setOccupation] = useState('Web Developer');
     const [email, setEmail] = useState('priyan@gmail.com');
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
@@ -94,6 +96,7 @@ export const CvFinish = () => {
                                 skillData={skills}
                                 otherFTitle={otherTitle}
                                 otherFDesc={otherDesc}
+                                profileImage={profileImage}
                             />
                         </UiCol>
 
