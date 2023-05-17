@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,500&display=swap');
+
 .pd-cv-format {
-    *{
+    * {
         font-family: 'Roboto Slab', serif !important;
     }
-   
+
     .pd-cv-wrapper {
         box-shadow: rgb(217, 221, 224) 0px 0px 34px 0px;
         padding: 2.5rem;
@@ -11,7 +12,7 @@
         // =========== left
         .pd-cv-left {
             flex: 0 0 40%;
-            max-width: 40%;            
+            max-width: 40%;
             padding: 1rem 0;
 
             .pd-ls-loc {
@@ -35,25 +36,27 @@
         .pd-cv-right {
             flex: 0 0 60%;
             max-width: 60%;
-            display: flex;            
+            display: flex;
             padding: 0.7rem 0;
 
-            .pd-desc-lg{
-                h5{
-                     @include fnt-dmsans(600, 0.8rem);
-                     margin-bottom: 0.2rem;
-                     color: $paraColor;
+            .pd-desc-lg {
+                h5 {
+                    @include fnt-dmsans(600, 0.8rem);
+                    margin-bottom: 0.2rem;
+                    color: $paraColor;
                 }
-                h6{
-                     @include fnt-dmsans(600, 0.7rem);
-                     color: $paraColor;
-                     margin-bottom: 0.5rem;
+
+                h6 {
+                    @include fnt-dmsans(600, 0.7rem);
+                    color: $paraColor;
+                    margin-bottom: 0.5rem;
                 }
-                p{
-                     @include fnt-dmsans(400, 0.65rem);
-                     color: $paraColor;
-                     line-height: 1.1rem;
-                     margin-bottom: 0;
+
+                p {
+                    @include fnt-dmsans(400, 0.65rem);
+                    color: $paraColor;
+                    line-height: 1.1rem;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -125,16 +128,17 @@
                 margin-bottom: 0;
             }
 
-            .pd-skills-set{
-                h6{
+            .pd-skills-set {
+                h6 {
                     margin: 5px 0;
                 }
-               
-                &__item{
+
+                &__item {
                     display: flex;
                     flex-wrap: wrap;
                     margin-top: -1.65rem;
-                    div{
+
+                    div {
                         @include fnt-dmsans(400, 0.6rem);
                         color: $paraColor;
                         background: $lightExGray;
@@ -149,65 +153,87 @@
     }
 }
 
-.pd-cv-left-6{
+.pd-cv-left-6 {
     padding: 5% 30px;
-    .pd-cv-inp-form-wrapper{
-        .pd-main-title{
+
+    .pd-cv-inp-form-wrapper {
+        .pd-main-title {
             font-size: 1.5rem;
         }
-        .pd-cv-desc{
+
+        .pd-cv-desc {
             @include fnt-dmsans(400, 1rem);
             color: $paraColor;
         }
-        .pd-form-inp-title{
+
+        .pd-form-inp-title {
             @include fnt-dmsans(700, 1.2rem);
             color: $paraColor;
             margin-bottom: 1rem;
             margin-top: 1.5rem;
         }
-       
+
     }
-    .pd-primary-btn{
+
+    .pd-primary-btn {
         font-size: 0.8rem;
     }
-   
+
 }
-.pd-cv-right-6{
+
+.pd-cv-right-6 {
     padding: 5% 30px;
     max-height: 100vh;
     overflow: auto;
     padding-bottom: 10%;
-    @include laptop{
+
+    @include laptop {
         max-height: 85vh;
     }
 }
 
-.pd-cv-finish{
+.pd-cv-finish {
     max-width: 800px;
     margin: auto;
-   
-    .pd-cv-right-6{
+
+    .pd-cv-right-6 {
         max-height: unset;
     }
 }
 
-.pd-download{
+.pd-download {
     text-align: center;
     margin: 0 0 3rem 0;
     margin-bottom: 2rem;
 }
 
-.pd-btn-group{
-    button{
+.pd-btn-group {
+    button {
         margin: 0 0.2rem !important;
     }
-    .pd-link-btn{
+
+    .pd-link-btn {
         padding: 0;
-        a{
+
+        a {
             color: $white !important;
             text-decoration: none;
             padding: 12px 35px;
             display: inline-block;
+            transition: all 0.5s;
         }
-    }           
+    }
+
+    .pd-primary-btn-outlined {
+        a {
+            color: $primary !important;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            a {
+                color: $white !important;
+            }
+        }
+    }
 }
