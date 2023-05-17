@@ -6,6 +6,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { Textarea } from "@mui/joy";
+import FileUplImg from '../../styles/img/file-upload.png'
 
 export const UiTextInput = (props) => {
     return (
@@ -76,12 +77,20 @@ export const UiTextArea = (props) => {
 export const UiFileInput = (props) => {
     return (
         <>
-            <Input
-                className={props.className}
-                type="file"
-                value={props.value}
-                onChange={props.onChange}
-            />
+            <div className="pd-fi-wrp">
+                <label>
+                    <div>
+                        <img src={FileUplImg} />
+                        {props.label}
+                    </div>
+                </label>
+                <Input
+                    className={props.className}
+                    type="file"
+                    value={props.value}
+                    onChange={props.onChange}
+                />
+            </div>
         </>
     )
 }

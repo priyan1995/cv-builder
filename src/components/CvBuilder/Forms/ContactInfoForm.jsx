@@ -52,6 +52,7 @@ export const ContactInfoForm = (props) => {
                                     className="pd-img-input"
                                     defaultValue={profileImage}
                                     onChange={handleChange}
+                                    label="Add Your Photo"
                                 />
                             </UiCol>
 
