@@ -18,7 +18,7 @@ label,
     @include border-radius(1rem);
 
     @include tablet {
-        width:520px;
+        width: 520px;
     }
 
     margin: auto;
@@ -48,18 +48,21 @@ label,
         @include fnt-dmsans(400, 1rem);
         margin-top: 1rem;
     }
-    .pd-forg-pw{
+
+    .pd-forg-pw {
         @include fnt-dmsans(500, 1rem);
         text-decoration: none;
         color: $primary;
     }
-    .pd-su-terms{
+
+    .pd-su-terms {
         text-align: center;
         @include fnt-dmsans(400, 0.8rem);
         margin-top: 1rem;
         color: $paraColor;
         line-height: 1.3rem;
-        a{
+
+        a {
             color: $primary;
             text-decoration: none;
         }
@@ -81,20 +84,20 @@ label,
         text-decoration: none !important;
         transition: all 0.5s;
 
-        &:hover{
+        &:hover {
             transition: 0.5s;
             background: #f7f7f7;
         }
 
 
 
-        div{
+        div {
             display: flex;
             align-items: center;
         }
 
         &:last-child {
-            img{
+            img {
                 margin-top: -4px;
             }
         }
@@ -155,9 +158,10 @@ label,
     }
 }
 
-.pd-experience-list{
+.pd-experience-list {
     margin: 2rem 0 1rem;
-    div{
+
+    div {
 
         padding: 1.5rem;
         background: #80808026;
@@ -165,29 +169,30 @@ label,
         @include border-radius(10px);
         position: relative;
 
-        h5{
-              @include fnt-dmsans(600, 1.2rem);
+        h5 {
+            @include fnt-dmsans(600, 1.2rem);
         }
 
-        h6{
-              @include fnt-dmsans(600, 1rem);
+        h6 {
+            @include fnt-dmsans(600, 1rem);
         }
 
-        .pd-per{
-              @include fnt-dmsans(400, 0.85rem);
-              margin-bottom: 0;
+        .pd-per {
+            @include fnt-dmsans(400, 0.85rem);
+            margin-bottom: 0;
         }
 
-        .pd-loc{
-              @include fnt-dmsans(400, 0.85rem);
-              margin-bottom: 5px;
+        .pd-loc {
+            @include fnt-dmsans(400, 0.85rem);
+            margin-bottom: 5px;
         }
 
-        .pd-desc{
-              @include fnt-dmsans(400, 0.85rem);
-              margin-bottom: 0;
+        .pd-desc {
+            @include fnt-dmsans(400, 0.85rem);
+            margin-bottom: 0;
         }
-        .pd-remove-button-rounded{
+
+        .pd-remove-button-rounded {
             border: none;
             background: $lightRed;
             @include border-radius(100%);
@@ -205,21 +210,23 @@ label,
     }
 }
 
-.pd-skills-list-fm{
+.pd-skills-list-fm {
     display: flex;
     flex-wrap: wrap;
-    div{
+
+    div {
         padding: 0.5rem;
         background: #80808026;
         margin: 0.5rem;
         @include border-radius(10px);
         position: relative;
 
-        h5{
-              @include fnt-dmsans(500, 0.875rem);
-              margin-bottom: 0;
+        h5 {
+            @include fnt-dmsans(500, 0.875rem);
+            margin-bottom: 0;
         }
-        .pd-remove-button-rounded{
+
+        .pd-remove-button-rounded {
             width: 15px;
             height: 15px;
             @include fnt-dmsans(700, 0.6rem);
@@ -229,22 +236,37 @@ label,
     }
 }
 
-.pd-btn-group{
-    button{
-        &:first-child{
+.pd-btn-group {
+    button {
+        &:first-child {
             margin-right: 1rem;
         }
     }
 }
 
-.pd-fh-form{
+.pd-fh-form {
     max-height: 100vh;
     overflow: auto;
-    @include laptop{
+
+    @include laptop {
         max-height: 50vh;
     }
 }
 
-.pd-img-input{
-    margin-bottom: 2rem;
+.pd-img-input {
+    width: 100%;
+}
+
+.pd-img-inp-wrapper {
+    align-items: center;
+    padding: 0;
+    margin:0 ;
+    margin-bottom: 1.5rem ; 
+
+    &__pd-prof-img-upd-lbl-ds {
+        height: 80px;
+        object-fit: contain;
+        object-position: right;
+        width: 100%;
+    }
 }

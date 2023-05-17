@@ -36,18 +36,19 @@ export const ContactInfoForm = (props) => {
                     <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Contact Information</h4>
 
-                        <UiCol lg="8">
-                            <UiFileInput
-                                className="pd-img-input"
-                                defaultValue={profileImage}
-                            />
-                        </UiCol>
+                        <UiRow className="pd-img-inp-wrapper">
+                            <UiCol lg="8">
+                                <UiFileInput
+                                    className="pd-img-input"
+                                    defaultValue={profileImage}
+                                />
+                            </UiCol>
 
 
-                        <UiCol lg="4">
-                            <img src={profileImage} className="w-100"/>
-                        </UiCol>
-
+                            <UiCol lg="4">
+                                <img src={profileImage} className="pd-img-inp-wrapper__pd-prof-img-upd-lbl-ds" />
+                            </UiCol>
+                        </UiRow>
 
                         <UiCol lg="6">
                             <UiTextInput
