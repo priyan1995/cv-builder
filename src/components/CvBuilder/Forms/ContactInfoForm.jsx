@@ -1,7 +1,7 @@
 import React from "react";
 import { UiRow } from "../../Common/UiRow";
 import { UiCol } from "../../Common/UiCol";
-import { UiDateInput, UiTextInput } from "../../Common/UiInput";
+import { UiDateInput, UiFileInput, UiTextInput } from "../../Common/UiInput";
 import { UiTitle } from "../../Common/UiTitle";
 import { UiButton } from "../../Common/UiButtons";
 
@@ -9,6 +9,8 @@ export const ContactInfoForm = (props) => {
 
     const firstName = props.firstName;
     const setFirstName = props.setFirstName;
+    const profileImage = props.profileImage;
+    const setProfileImage = props.setProfileImage;
     const lastName = props.lastName;
     const setLastName = props.setLastName;
     const occupation = props.occupation;
@@ -33,6 +35,20 @@ export const ContactInfoForm = (props) => {
                 <form>
                     <UiRow className="pd-fh-form">
                         <h4 className="pd-form-inp-title">Contact Information</h4>
+
+                        <UiCol lg="8">
+                            <UiFileInput
+                                className="pd-img-input"
+                                defaultValue={profileImage}
+                            />
+                        </UiCol>
+
+
+                        <UiCol lg="4">
+                            <img src={profileImage} className="w-100"/>
+                        </UiCol>
+
+
                         <UiCol lg="6">
                             <UiTextInput
                                 label="First Name"
@@ -42,9 +58,7 @@ export const ContactInfoForm = (props) => {
                                 defaultValue={firstName}
                             />
                         </UiCol>
-                        <UiCol lg="6">
 
-                        </UiCol>
 
                         <UiCol lg="6">
                             <UiTextInput

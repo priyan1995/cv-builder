@@ -20,6 +20,7 @@ import { SkillData } from "../mockData/Skills";
 import { SkillsForm } from "../components/CvBuilder/Forms/SkillsForm";
 import { OtherData } from "../mockData/Other";
 import { OtherForm } from "../components/CvBuilder/Forms/OtherForm";
+import profileImg from '../styles/img/profile.jpg';
 
 export const CvBuilder = () => {
 
@@ -35,6 +36,7 @@ export const CvBuilder = () => {
     // personal Info
     const [firstName, setFirstName] = useState('Priyan');
     const [lastName, setLastName] = useState('Darshana');
+    const [profileImage, setProfileImage] = useState(profileImg);
     const [occupation, setOccupation] = useState('Web Developer');
     const [email, setEmail] = useState('priyan@gmail.com');
     const [address, setAddress] = useState('No.120, Kottawa, Pannipitiya.');
@@ -207,6 +209,8 @@ export const CvBuilder = () => {
                                 description="Let us know who you are, how employers can get in touch with you, and what your profession is."
                                 firstName={firstName}
                                 setFirstName={setFirstName}
+                                profileImage={profileImage}
+                                setProfileImage={setProfileImage}
                                 lastName={lastName}
                                 setLastName={setLastName}
                                 occupation={occupation}
@@ -361,6 +365,7 @@ export const CvBuilder = () => {
                             skillData={skills}
                             otherFTitle={otherTitle}
                             otherFDesc={otherDesc}
+                            profileImage={profileImage}
                         />
                     </UiCol>
                 </UiRow>

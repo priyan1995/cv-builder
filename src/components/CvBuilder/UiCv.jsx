@@ -1,5 +1,4 @@
 import React from "react";
-import profileImg from '../../styles/img/profile.jpg';
 import { Objectives } from "./Format1/Objectives";
 import { Experience } from "./Format1/Experience";
 import { Education } from "./Format1/Education";
@@ -24,7 +23,7 @@ export const UiCv = (props) => {
                                 <p><strong>Address: </strong>{props.address}</p>
                                 <p><strong>Phone: </strong>{props.phone}</p>
                             </div>
-                            <img src={profileImg} />
+                            <img src={props.profileImage} />
                         </div>
                     </div>
                     <Objectives

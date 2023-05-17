@@ -63,10 +63,23 @@ export const UiTextArea = (props) => {
     return (
         <>
             <TextareaAutosize
-                placeholder={props.placeholder}               
+                placeholder={props.placeholder}
                 minRows={props.minRows}
                 className={props.className}
                 defaultValue={props.defaultValue}
+                onChange={props.onChange}
+            />
+        </>
+    )
+}
+
+export const UiFileInput = (props) => {
+    return (
+        <>
+            <Input
+                className={props.className}
+                type="file"
+                value={props.value}
                 onChange={props.onChange}
             />
         </>
