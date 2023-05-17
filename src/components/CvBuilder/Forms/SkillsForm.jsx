@@ -37,8 +37,9 @@ export const SkillsForm = (props) => {
                     <UiRow>
                         <UiCol lg="12">
                             <div className="pd-btn-group">
+                                <UiButton className="pd-primary-btn-outlined pd-large-pad" onClick={props.prev}>Previous</UiButton>
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
-                                <UiButton className="pd-primary-btn pd-large-pad" onClick={props.next}>Next</UiButton>
+                                <UiButton className="pd-primary-btn pd-large-pad f-right" onClick={props.next}>Next</UiButton>
                             </div>
                         </UiCol>
                     </UiRow>

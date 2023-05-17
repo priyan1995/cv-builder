@@ -36,7 +36,11 @@ export const ObjectivesForm = (props) => {
                     </UiRow>
                     <UiRow>
                         <UiCol lg="12">
-                            <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
+                        <div className="pd-btn-group">
+                                <UiButton className="pd-primary-btn-outlined pd-large-pad" onClick={props.prev}>Previous</UiButton>
+                                <UiButton className="pd-primary-btn pd-large-pad f-right" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
+                            </div>
+                           
                         </UiCol>
                     </UiRow>
                 </form>

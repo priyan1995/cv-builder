@@ -89,27 +89,43 @@ export const CvBuilder = () => {
 
     // personal Infomation Form
     const OnsaveFormOne = () => {
-        console.log('saved Contact');
         setViewPersonalInfo(false);
         setViewObjectives(true);
     }
 
     // objectives Form
     const OnsaveObjective = () => {
-        console.log('saved Objective');
         setViewObjectives(false);
         setViewExperience(true);
     }
+
+    // prev from obj
+    const prevFromObj = () =>{
+        setViewPersonalInfo(true);
+        setViewObjectives(false);
+    }
+
 
     // experience form next
     const nextFromExp = () => {
         setViewExperience(false);
         setViewEducation(true);
     }
+     
+    const prevFromExp = () => {
+        setViewObjectives(true);
+        setViewExperience(false);
+    }
 
+    // education form next
     const nextFromEdu = () => {
         setViewEducation(false);
         setViewLang(true);
+    }
+
+    const prevFromEdu = () => {
+        setViewExperience(true);
+        setViewEducation(false);
     }
 
     // Langauge form next
@@ -118,12 +134,26 @@ export const CvBuilder = () => {
         setViewSkills(true);
     }
 
+    const prevFromLang = () =>{
+        setViewEducation(true);
+        setViewLang(false);
+    }
     // skills form next
     const nextFromSkills = () => {
         setViewSkills(false);
         setViewOther(true);
     }
 
+    const pervFromSkills = () => {
+        setViewLang(true);
+        setViewSkills(false);
+    }
+
+    // prev from other
+    const prevFromOth = () => {
+        setViewSkills(true);
+        setViewOther(false);
+    }
 
     // save Experience data
     const onSaveExp = (e) => {
@@ -240,6 +270,7 @@ export const CvBuilder = () => {
                                 SaveBttonText="Save Objective"
                                 objective={objective}
                                 setObjective={setObjective}
+                                prev={prevFromObj}
 
                             />
                         }
@@ -265,6 +296,7 @@ export const CvBuilder = () => {
                                 exper={experience}
                                 removeItem={removeExperienceItem}
                                 nextStep={nextFromExp}
+                                prev={prevFromExp}
 
                             />
                         }
@@ -290,6 +322,7 @@ export const CvBuilder = () => {
                                 eduData={education}
                                 removeItem={removeEducationItem}
                                 onClick={onSaveEduc}
+                                prev={prevFromEdu}
                             />
                         }
 
@@ -311,6 +344,7 @@ export const CvBuilder = () => {
                                 removeItem={removeLanguage}
                                 next={nextFromLang}
                                 onClick={onSaveLang}
+                                prev={prevFromLang}
 
                             />
                         }
@@ -328,6 +362,7 @@ export const CvBuilder = () => {
                                 removeItem={removeSkill}
                                 onClick={onSaveSkill}
                                 next={nextFromSkills}
+                                prev={pervFromSkills}
                             />
                         }
 
@@ -345,6 +380,7 @@ export const CvBuilder = () => {
                                 SaveBttonText="Save"
                                 onClick={onSaveOther}
                                 next="/cv-finish"
+                                prev={prevFromOth}
 
                             />
                         }

@@ -48,8 +48,9 @@ export const OtherForm = (props) => {
                     <UiRow>
                         <UiCol lg="12">
                             <div className="pd-btn-group">
-                                <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
-                                <UiButton className="pd-primary-btn pd-large-pad pd-link-btn" > <Link to={props.next}>Finish</Link></UiButton>
+                                <UiButton className="pd-primary-btn-outlined pd-large-pad" onClick={props.prev}>Previous</UiButton>
+                                {/* <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton> */}
+                                <UiButton className="pd-primary-btn pd-large-pad pd-link-btn f-right" > <Link to={props.next}>Finish</Link></UiButton>
                             </div>
                         </UiCol>
                     </UiRow>

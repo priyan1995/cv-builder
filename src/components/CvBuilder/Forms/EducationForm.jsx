@@ -23,6 +23,7 @@ export const EducationForm = (props) => {
     const edu = props.eduData;
     const removeItem = props.removeItem;
     const next = props.next;
+    const prev = props.prev;
 
 
     return (
@@ -91,8 +92,10 @@ export const EducationForm = (props) => {
                     <UiRow>
                         <UiCol lg="12">
                             <div className="pd-btn-group">
+                                <UiButton className="pd-primary-btn-outlined pd-large-pad" onClick={prev}>Previous</UiButton>
                                 <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
-                                <UiButton className="pd-primary-btn pd-large-pad" onClick={next}>Next</UiButton>
+                                <UiButton className="pd-primary-btn pd-large-pad f-right" onClick={next}>Next</UiButton>
+
                             </div>
                         </UiCol>
                     </UiRow>

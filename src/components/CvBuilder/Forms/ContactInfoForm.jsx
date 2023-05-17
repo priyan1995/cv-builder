@@ -134,7 +134,7 @@ export const ContactInfoForm = (props) => {
 
                     <UiRow>
                         <UiCol lg="12">
-                            <UiButton className="pd-primary-btn pd-large-pad" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
+                            <UiButton className="pd-primary-btn pd-large-pad f-right" onClick={props.onClick}>{props.SaveBttonText}</UiButton>
                         </UiCol>
                     </UiRow>
                 </form>
