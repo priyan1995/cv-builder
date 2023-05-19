@@ -69,8 +69,7 @@ export const CvFinish = () => {
 
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: 'Cv',
-        onAfterPrint: () => alert("Print Success")
+        documentTitle: 'Cv'
     })
 
 
