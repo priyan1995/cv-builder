@@ -8,6 +8,7 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import { SignUp } from './pages/SignUp';
 import { CvBuilder } from './pages/CvBuilder';
 import { CvFinish } from './pages/CvFinish';
+import { Elements } from './pages/Elements';
 
 function App() {
   const theme = createTheme({
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/sign-up" element={<SignUp />} />
           <Route exact path="/cv" element={<CvBuilder />} />
           <Route exact path="/cv-finish" element={<CvFinish />} />
+          <Route exact path="/elements" element={<Elements />} />
         </Routes>
       </Router>
     </ThemeProvider>

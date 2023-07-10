@@ -1,4 +1,4 @@
-import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Input, TextField, TextareaAutosize } from "@mui/material";
+import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Input, InputLabel, MenuItem, TextField, TextareaAutosize } from "@mui/material";
 import React from "react";
 import { pink } from '@mui/material/colors';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
@@ -7,6 +7,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { Textarea } from "@mui/joy";
 import FileUplImg from '../../styles/img/file-upload.png'
+import { useState } from "react";
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 export const UiTextInput = (props) => {
     return (
@@ -91,6 +93,34 @@ export const UiFileInput = (props) => {
                     onChange={props.onChange}
                 />
             </div>
+        </>
+    )
+}
+
+export const UiSelectInput = (props) => {
+
+    const [age, setAge] = useState('10');
+
+    const handleChange = (event: SelectChangeEvent) => {
+      setAge(event.target.value);
+    };
+
+    return (
+        <>
+            <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={age}
+                    label={props.label}
+                    onChange={handleChange}
+                >
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
         </>
     )
 }
