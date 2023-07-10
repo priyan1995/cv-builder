@@ -163,7 +163,7 @@ function getStyles(name: string, personName: string[], theme: Theme) {
     };
 }
 
-export  function MultipleSelect() {
+export function MultipleSelect() {
     const theme = useTheme();
     const [personName, setPersonName] = useState([]);
 
@@ -207,7 +207,7 @@ export  function MultipleSelect() {
 
 
 
-export  function MultipleSelectChip() {
+export function MultipleSelectChip() {
     const theme = useTheme();
     const [personName, setPersonName] = useState([]);
 
@@ -257,36 +257,39 @@ export  function MultipleSelectChip() {
 }
 
 
-export  function SearchSelect() {
+export function SearchSelect() {
     return (
-        <Autocomplete
-            id="country-select-demo"
-            sx={{ width: 300 }}
-            options={countries}
-            autoHighlight
-            getOptionLabel={(option) => option.label}
-            renderOption={(props, option) => (
-                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+        <>
+         
+            <Autocomplete
+                id="country-select-demo"
+                sx={{ width: 300 }}
+                options={countries}
+                autoHighlight
+                getOptionLabel={(option) => option.label}
+                renderOption={(props, option) => (
+                    <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
 
-                    {option.label} ({option.code}) +{option.phone}
-                </Box>
-            )}
-            renderInput={(params) => (
-                <TextField
-                    {...params}
-                    label="Choose a country"
-                    inputProps={{
-                        ...params.inputProps,
-                        autoComplete: 'new-password', // disable autocomplete and autofill
-                    }}
-                />
-            )}
-        />
+                        {option.label} ({option.code}) +{option.phone}
+                    </Box>
+                )}
+                renderInput={(params) => (
+                    <TextField
+                        {...params}
+                        label="Choose a country"
+                        inputProps={{
+                            ...params.inputProps,
+                            autoComplete: 'new-password', // disable autocomplete and autofill
+                        }}
+                    />
+                )}
+            />
+        </>
     );
 }
 
 // From https://bitbucket.org/atlassian/atlaskit-mk-2/raw/4ad0e56649c3e6c973e226b7efaeb28cb240ccb0/packages/core/select/src/data/countries.js
-const countries:  CountryType[] = [
+const countries: CountryType[] = [
     { code: 'AD', label: 'Andorra', phone: '376' },
     {
         code: 'AE',
