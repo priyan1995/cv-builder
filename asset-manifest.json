@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/cv-builder/static/css/main.98ebbbc2.css",
+    "main.js": "/cv-builder/static/js/main.82016590.js",
+    "static/js/787.572f0896.chunk.js": "/cv-builder/static/js/787.572f0896.chunk.js",
+    "static/media/google.png": "/cv-builder/static/media/google.bc3141c6bca5036cd82b.png",
+    "static/media/comma.png": "/cv-builder/static/media/comma.0bd325a4eb3e03e75c71.png",
+    "static/media/dummy-cv.png": "/cv-builder/static/media/dummy-cv.3defbe4c19617f7c321d.png",
+    "static/media/bg-banner-home.jpg": "/cv-builder/static/media/bg-banner-home.3f19320e9fba520422ce.jpg",
+    "static/media/clients.png": "/cv-builder/static/media/clients.18645187e9a408d43f70.png",
+    "static/media/target.png": "/cv-builder/static/media/target.9fba473875a5d79728a4.png",
+    "static/media/contract.png": "/cv-builder/static/media/contract.16591a0cd8dab6ff048d.png",
+    "static/media/requirement.png": "/cv-builder/static/media/requirement.83d1109e466ab7350b34.png",
+    "static/media/search.png": "/cv-builder/static/media/search.2550c90b4467ebb74694.png",
+    "static/media/trophy.png": "/cv-builder/static/media/trophy.57b44fd0b79491705e1b.png",
+    "static/media/finish.png": "/cv-builder/static/media/finish.57f0e406cb7175662335.png",
+    "index.html": "/cv-builder/index.html",
+    "main.98ebbbc2.css.map": "/cv-builder/static/css/main.98ebbbc2.css.map",
+    "main.82016590.js.map": "/cv-builder/static/js/main.82016590.js.map",
+    "787.572f0896.chunk.js.map": "/cv-builder/static/js/787.572f0896.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98ebbbc2.css",
+    "static/js/main.82016590.js"
+  ]
+}
