@@ -53,7 +53,7 @@ export const HowToCreateGreatResume = (props) => {
                             <UiSubtitle>
                                 Discover how our resume maker can help you nail your resume, get more interviews, and land your dream job!
                             </UiSubtitle>
-                            <Link to="/">
+                            <Link to="/cv">
                                 <UiButton className="pd-primary-btn">Try It Now!</UiButton>
                             </Link>
                         </UiCol>
